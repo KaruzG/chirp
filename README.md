@@ -16,6 +16,8 @@ La estructura del proyecto sigue el patrón de diseño Modelo-Vista-Controlador 
 /var/www/html/
 |-- app/
 |   |-- controllers/
+|   |-- views/
+|   |-- models/
 |-- public/
 |   |-- css/
 |   |-- js/
