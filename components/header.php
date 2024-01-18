@@ -15,6 +15,5 @@
             <img src="../public/svg/icons8-menu-bar.svg" alt="">
         </button>
     </header>
-    
 </body>
 </html>

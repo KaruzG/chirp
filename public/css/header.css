@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainGreen);
+  width: 100vw;
+  height: 3.5em;
+}
+header button {
+  position: absolute;
+  right: 1em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+header button img {
+  width: 30px;
+  height: 30px;
+}
+header a {
+  font-size: large;
+  text-shadow: var(--textShadow);
+  font-family: "Sonsie One", system-ui;
+  color: white;
+}/*# sourceMappingURL=header.css.map */
