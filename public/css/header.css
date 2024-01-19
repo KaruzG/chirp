@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
-header {
+chirp-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,20 +7,20 @@ header {
   width: 100vw;
   height: 3.5em;
 }
-header button {
+chirp-header button#headerDropdown {
   position: absolute;
   right: 1em;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-header button img {
+chirp-header button#headerDropdown img {
   width: 30px;
   height: 30px;
 }
-header a {
+chirp-header a {
   font-size: large;
   text-shadow: var(--textShadow);
   font-family: "Sonsie One", system-ui;
-  color: white;
+  color: var(--white);
 }/*# sourceMappingURL=header.css.map */
