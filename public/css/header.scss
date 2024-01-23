@@ -32,8 +32,8 @@ chirp-header {
     // Dropdown
     div#headerDropdownOuter {
         position: absolute;
-        display: block; // DEBUG: CAMBIAR A NONE
-        //display: none;
+        //display: block; // DEBUG: CAMBIAR A NONE
+        display: none;
         right: 0;
         top: 3.5em;
         min-width: 200px;
