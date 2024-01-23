@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;700&display=swap");
+* {
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--black);
+}
+
 body {
   background-color: var(--white);
 }/*# sourceMappingURL=index.css.map */

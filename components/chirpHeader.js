@@ -4,14 +4,17 @@
 // vars.css
 // header.css
 
+// TODO: img Usuario y usuario
+
 // ISSUES
-// EL constructor se ejecuta 2 veces 
+// EL constructor se ejecuta 2 veces EDIT: Ya no?!
 
 class ChirpHeader extends HTMLElement {
     constructor() {
         super()
         this.render()
         this.dropdownButton()
+        console.log("✅ · Component Header Loaded")
     }
 
     render() {
@@ -40,21 +43,31 @@ class ChirpHeader extends HTMLElement {
     }
 
     dropdownButton() {
-        if (document.body.contains(document.getElementById("ulDropdown"))) {
-            return false
-        }
-
         let button = document.getElementById("headerDropdownButton")
         let dropdown = document.getElementById("headerDropdownOuter")
 
-        // TODO: img Usuario y usuario
-        // ...
+        // User -----------------
+        let userDiv = document.createElement("div")
+        userDiv.classList.add("headerDropdown-user")
 
-        // Lista del dropdown
+        let img = document.createElement("img")
+        img.src = "../public/img/defaultProfilePicture.jpg"
+
+        let userName = document.createElement("a")
+        userName.innerText = "Username!"
+
+        userDiv.append(img)
+        userDiv.append(userName)
+
+
+        // Lista del dropdown -----------------
+        const dropdownList = ["Home", "Saved", "Profile", "Settings"]
+
         let ul = document.createElement("ul")
         ul.id = "ulDropdown"
 
-        const dropdownList = ["Home", "Saved", "Profile", "Settings"]
+        ul.append(userDiv)
+
         for (const i of dropdownList) {
             ul.appendChild(document.createElement("hr"))
             let li = document.createElement("li")
@@ -64,7 +77,7 @@ class ChirpHeader extends HTMLElement {
         dropdown.append(ul)
 
 
-        // Ocultar/Mostrar dropdown
+        // Ocultar/Mostrar dropdown -----------------
         button.addEventListener("click", (ev) => {
             ev.stopImmediatePropagation()
             if (dropdown.style.display === "block") {
