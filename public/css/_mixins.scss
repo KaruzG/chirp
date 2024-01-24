@@ -3,3 +3,13 @@
     color: var(--black);
     font-style: italic;
 }
+
+@mixin followButton() {
+    height: 2.5em;
+    width: 80px;
+    background-color: var(--mainGreen);
+    font-weight: bold;
+    color: var(--white);
+    border-radius: 20px;
+    border: 2px solid var(--chirpLightGreen2);
+}
