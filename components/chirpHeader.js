@@ -30,7 +30,7 @@ class ChirpHeader extends HTMLElement {
         outerContainer.appendChild(button)
 
         let buttonSvg = document.createElement("img")
-        buttonSvg.src = "../public/svg/icons8-menu-bar.svg"
+        buttonSvg.src = "/public/svg/icons8-menu-bar.svg"
         button.appendChild(buttonSvg)
 
         // Dropwdown
@@ -51,7 +51,7 @@ class ChirpHeader extends HTMLElement {
         userDiv.classList.add("headerDropdown-user")
 
         let img = document.createElement("img")
-        img.src = "../public/img/defaultProfilePicture.jpg"
+        img.src = "/public/img/defaultProfilePicture.jpg"
 
         let userName = document.createElement("a")
         userName.innerText = "Username!"
