@@ -6,7 +6,11 @@
 
         /* GREEN */
         --mainGreen: #08887d;
+        --chirpLightGreen2: #86cac3;
         --chirpLightGreen: #bbf0eb;
+
+        /* BLACK */
+        --black: rgb(45, 45, 45); /* Not that agresive black */
         
     /* SHADOWS */
         /* TEXT */

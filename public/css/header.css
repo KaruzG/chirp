@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
+chirp-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainGreen);
+  width: 100vw;
+  height: 3.5em;
+}
+chirp-header button#headerDropdownButton {
+  position: absolute;
+  right: 1em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+chirp-header button#headerDropdownButton img {
+  width: 30px;
+  height: 30px;
+}
+chirp-header a#logoHeader {
+  font-size: large;
+  text-shadow: var(--textShadow);
+  font-family: "Sonsie One", system-ui;
+  color: var(--white);
+}
+chirp-header div#headerDropdownOuter {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 3.5em;
+  min-width: 200px;
+  background-color: var(--chirpLightGreen);
+}
+chirp-header div#headerDropdownOuter hr {
+  width: 95%;
+  border: 1px solid var(--chirpLightGreen2);
+}
+chirp-header div#headerDropdownOuter ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  gap: 0.5em;
+  font-weight: bold;
+}
+chirp-header div#headerDropdownOuter ul div.headerDropdown-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 3em;
+  width: 95%;
+}
+chirp-header div#headerDropdownOuter ul div.headerDropdown-user img {
+  height: 95%;
+  border-radius: 50%;
+  border: 2px solid var(--chirpLightGreen2);
+}
+chirp-header div#headerDropdownOuter ul div.headerDropdown-user a {
+  font-size: large;
+  color: var(--black);
+  font-style: italic;
+}/*# sourceMappingURL=header.css.map */
