@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* Primera fila para el encabezado, el resto para el contenido */
+    min-height: 100vh;
+}
+
+header {
+    background-color: #08887d;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    /* Reducir el espacio de relleno */
+}
+
+header h1 {
+    font-size: 18px;
+    /* Reducir el tamaño de la fuente */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Tres columnas iguales */
+    grid-gap: 10px;
+    /* Espacio entre las columnas */
+    padding: 10px;
+}
+
+.column {
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.column1 {
+    background-color: #c4fffb;
+}
+
+.column2 {
+    background-color: #ffff;
+}
+
+.column3 {
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background-color: #d4fffa;
+    border-radius: 30px / 30px;
+}
+
+.options-list li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    display: flex; /* Usar la disposición flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    margin-top: 50px;
+}
+
+
+.options-list li {
+    margin-bottom: 10px;
+    /* Espacio entre los elementos de la lista */
+}
+
+.options-list a {
+    text-decoration: none;
+    /* Quitar subrayado de los enlaces */
+    color: #333;
+    /* Color del texto de los enlaces */
+    display: block;
+    /* Hacer que los enlaces ocupen todo el ancho de su contenedor */
+}
+
+.options-list img {
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+}
