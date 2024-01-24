@@ -1,0 +1,61 @@
+.chirp-big {
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--chirpBg);
+  padding: 10px;
+  border-radius: 17px;
+}
+
+.post-heading {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  font-family: var(--defaultFont);
+}
+
+.text-container {
+  display: block;
+  width: auto;
+  font-family: var(--defaultFont);
+}
+
+.post-interactions {
+  align-self: flex-end;
+}
+
+.username {
+  position: relative;
+  left: 10px;
+  bottom: 7px;
+}
+
+#dots {
+  position: relative;
+  right: 7px;
+  top: 7px;
+}
+
+#popup-menu {
+  position: relative;
+  top: -50;
+  left: 50;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: none; /* Hide the popup initially */
+}
+
+#popup-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#popup-menu a:hover {
+  background-color: #f0f0f0;
+}/*# sourceMappingURL=chirpbox.css.map */

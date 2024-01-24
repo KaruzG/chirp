@@ -1,0 +1,69 @@
+@mixin fontFamily{
+    font-family: var(--defaultFont);
+}
+
+$postBG: var(--chirpBg);
+
+.chirp-big{
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: $postBG;
+    padding: 10px;
+    border-radius: 17px;
+}
+
+.post-heading{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    @include fontFamily;
+}
+
+.text-container{
+    display: block;
+    width: auto;
+    @include fontFamily;
+
+}
+
+.post-interactions{
+    align-self: flex-end;
+}
+
+.username{
+    position: relative;
+    left: 10px;
+    bottom: 7px;
+}
+
+#dots{
+    position: relative;
+    right: 7px;
+    top: 7px;
+}
+
+#popup-menu {
+    position: relative;
+    top: -50;
+    left: 50;
+    background-color: darken($postBG, 30%);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: block; /* Hide the popup initially */
+}
+
+#popup-menu a {
+    display: none;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+#popup-menu a:hover {
+    background-color: #f0f0f0;
+}
