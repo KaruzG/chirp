@@ -1,33 +1,35 @@
-# Chirp - Tu red social simple
+![image](https://github.com/KaruzG/chirp/assets/95084763/805c9e12-b45b-4aeb-ad7b-7c05540e1745)
 
-Chirp es una red social simple, similar a Twitter, donde puedes compartir mensajes en un feed público. Esta aplicación web está construida con PHP, JavaScript, SCSS y utiliza Apache como servidor web.
+# Your Simple Social Network
 
-## Características
+Chirp is a simple social network, where you can share messages on a public feed (Chirps 🐦). This web application is built with: **JavaScript, PHP, SCSS**, and uses Apache as the web server.
 
-- **Publicar Chirps:** Comparte tus pensamientos, enlaces o cualquier cosa que desees con la comunidad.
-- **Explorar el Feed:** Descubre lo que otros están compartiendo en el feed público.
-- **Perfiles de Usuario:** Visualiza perfiles de usuario con información básica.
+## Features
 
-## Estructura del Proyecto
+- **Post Chirps:** Share your thoughts, links, or anything you'd like with the community.
+- **Explore the Feed:** Discover what others are sharing on the public feed.
+- **User Profiles:** View user profiles with basic information.
 
-La estructura del proyecto sigue el patrón de diseño Modelo-Vista-Controlador (MVC):
+## Project Structure
+
+The project structure follows the Model-View-Controller (MVC) design pattern:
 
 ```plaintext
 /var/www/html/
 |-- app/
-|   |-- controllers/
-|   |-- views/
-|   |-- models/
+|-- components/
 |-- public/
 |   |-- css/
 |   |-- js/
 |   |-- uploads/
-|-- includes/
-|-- .htaccess
+|   |-- fonts/
+|   |-- img/
+|   |-- pages/
+|   |-- svg/
 |-- index.php
 |-- config.php
 ```
 
-## Configuración
-1. Crea una base de datos: Configura una base de datos MySQL y actualiza la información en config.php.
-2. Instala las dependencias: Utiliza ```Composer.sh``` para instalar las dependencias del proyecto.
+## Configuration
+1. Create a Database: Set up a MySQL database and update the information in config.php.
+2. Install Dependencies: Use `Composer.sh` to install project dependencies.
