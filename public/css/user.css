@@ -1,0 +1,86 @@
+section#userInfo {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray);
+  width: 95vw;
+  border-radius: 25px;
+  padding: 10px;
+}
+section#userInfo p {
+  margin-top: 1em;
+  margin-left: 10px;
+  margin-bottom: 0.7em;
+}
+section#userInfo div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-height: 120px;
+}
+section#userInfo div img#profilePicture {
+  border-radius: 50%;
+  width: 110px;
+}
+section#userInfo div div#userInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section#userInfo div div#userInfo div:nth-child(1) {
+  width: 100%;
+  gap: 1em;
+  align-items: center;
+}
+section#userInfo div div#userInfo div:nth-child(1) span {
+  font-size: large;
+  color: var(--black);
+  font-style: italic;
+  font-weight: bold;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: 20px;
+}
+section#userInfo div div#userInfo div:nth-child(1) button {
+  height: 2.5em;
+  width: 80px;
+  background-color: var(--mainGreen);
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 20px;
+  border: 2px solid var(--chirpLightGreen2);
+}
+section#userInfo div div#userInfo div:nth-child(1) img {
+  max-width: 25px;
+  max-height: 25px;
+  filter: invert(33%) sepia(30%) saturate(595%) hue-rotate(148deg) brightness(97%) contrast(94%);
+}
+section#userInfo div div#userInfo div:nth-child(2) {
+  justify-content: flex-start;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+section#userInfo div div#userInfo div:nth-child(2) table {
+  justify-content: space-between;
+  width: 100%;
+}
+section#userInfo div div#userInfo div:nth-child(2) table tr {
+  justify-content: space-between;
+}
+section#userInfo div div#userInfo div:nth-child(2) table tr td {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main h2 {
+  width: 100vw;
+  text-align: left;
+  margin-left: 1.5em;
+}/*# sourceMappingURL=user.css.map */
