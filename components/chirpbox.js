@@ -23,7 +23,7 @@ class Chirp extends HTMLElement {
         let userImage = document.createElement("a");
         userImage.href = "";
         let userImageSrc = document.createElement("img");
-        userImageSrc.src = "../public/img/profile.png";
+        userImageSrc.src = "./public/img/profile.png";
         userImageSrc.alt = "pfp";
         userImage.appendChild(userImageSrc);
 
@@ -39,7 +39,7 @@ class Chirp extends HTMLElement {
         actions.classList.add("actions");
 
         let dotsImage = document.createElement("img");
-        dotsImage.src = "../public/img/dots.png";
+        dotsImage.src = "./public/img/dots.png";
         dotsImage.height = "15";
         dotsImage.alt = "dots";
         dotsImage.id = "dots";
@@ -70,7 +70,7 @@ class Chirp extends HTMLElement {
         like.href = "";
         like.id = "like";
         let likeImage = document.createElement("img");
-        likeImage.src = "../public/img/heart.png";
+        likeImage.src = "./public/img/heart.png";
         likeImage.alt = "icon2";
         like.appendChild(likeImage);
 
@@ -78,7 +78,7 @@ class Chirp extends HTMLElement {
         comment.href = "";
         comment.id = "comment";
         let commentImage = document.createElement("img");
-        commentImage.src = "../public/img/chat_2.png";
+        commentImage.src = "./public/img/chat_2.png";
         commentImage.alt = "icon3";
         comment.appendChild(commentImage);
 
@@ -106,7 +106,7 @@ class Chirp extends HTMLElement {
 
         dropdown.appendChild(reportChirp);
         dropdown.appendChild(shareChirp);
-        outerContainer.appendChild(dropdown);
+        actions.appendChild(dropdown);
     }
 
     //Dropdown functionality
@@ -117,7 +117,7 @@ class Chirp extends HTMLElement {
         dots.addEventListener('click', (e) => {
             e.preventDefault();
             if (actionsMenu.style.display === 'none' || actionsMenu.style.display === '') {
-                actionsMenu.style.display = 'block';
+                actionsMenu.style.display = 'flex';
             } else {
                 actionsMenu.style.display = 'none';
             }

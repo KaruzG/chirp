@@ -2,9 +2,18 @@
 
 @mixin fontFamily{
     font-family: 'Source Sans 3';
+    font-size: $fontSize;
+}
+
+@mixin options{
+    padding: 10px;
+    text-decoration: none;
+    color: $optionsFontColor;
 }
 
 $postBG: #e5fffc;
+$fontSize: 16px;
+$optionsFontColor: #636363;
 
 .chirp-big{
     min-width: 300px;
@@ -48,23 +57,24 @@ $postBG: #e5fffc;
 }
 
 #popup-menu {
+    float: left;
     position: relative;
     top: -50;
     left: 50;
-    background-color: darken($postBG, 20%);
+    background-color: darken($postBG, 5%);
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    display: block; /* Hide the popup initially */
+    display: none; /* Hide the popup initially */
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 #popup-menu a {
-    display: none;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
+    @include options;
 }
 
 #popup-menu a:hover {
-    background-color: #f0f0f0;
+    color: darken($color: $optionsFontColor, $amount: 40%);
 }
