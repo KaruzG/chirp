@@ -1,0 +1,93 @@
+@use 'mixins';
+
+section#userInfo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    width: 95vw;
+    border-radius: 25px;
+    padding: 10px;
+
+    p {
+        margin-top: 1em;
+        margin-left: 10px;
+        margin-bottom: 0.7em;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        max-height: 120px;
+
+        img#profilePicture {
+            border-radius: 50%;
+            width: 110px; 
+        }
+
+        div#userInfo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            div:nth-child(1) {
+                width: 100%;
+                gap: 1em;
+                align-items: center;
+                span {
+                    @include mixins.userName;
+                    font-weight: bold;
+                    max-width: 320px;
+                    margin-right: auto;
+                    margin-left: 20px;
+                }
+        
+                button {
+                    @include mixins.followButton;
+                }
+
+                img {
+                    max-width: 25px;
+                    max-height: 25px;
+
+                    filter: invert(33%) sepia(30%) saturate(595%) hue-rotate(148deg) brightness(97%) contrast(94%);
+                }
+            }
+
+            div:nth-child(2) {
+                justify-content: flex-start;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-left: 20px;
+                margin-right: 10px;
+
+                table {
+                    justify-content: space-between;
+                    width: 100%;
+
+                    tr {
+                        justify-content: space-between;
+                        td {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        width: 100vw;
+        text-align: left;
+        margin-left: 1.5em;
+    }
+}
