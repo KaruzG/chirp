@@ -43,7 +43,7 @@
 
 #popup-menu {
   float: left;
-  position: relative;
+  position: absolute;
   top: -50;
   left: 50;
   background-color: #ccfff9;

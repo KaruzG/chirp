@@ -58,7 +58,7 @@ $optionsFontColor: #636363;
 
 #popup-menu {
     float: left;
-    position: relative;
+    position: absolute;
     top: -50;
     left: 50;
     background-color: darken($postBG, 5%);
@@ -76,5 +76,5 @@ $optionsFontColor: #636363;
 }
 
 #popup-menu a:hover {
-    color: darken($color: $optionsFontColor, $amount: 40%);
+    color: darken($color: $optionsFontColor, $amount: 75%);
 }
