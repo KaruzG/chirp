@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Source Sans Pro, sans-serif, Syne regular;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+}
+.menu {
+  background-color: #08887d;
+}
+.menu nav {
+  padding: 0.25rem 0;
+}
+.menu ul {
+  margin-left: 6rem;
+}
+.menu li {
+  list-style-type: none;
+}
+.menu li a {
+  text-decoration: none;
+  color: white;
+}
+#A1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2rem;
+  width: 100%;
+  margin: 0;
+}
+.columna {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #c4fffb;
+  height: 90vh;
+  background-color: #c4fffb;
+}
+.menu-lateral {
+  margin-top: 4rem;
+}
+.menu-lateral ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-lateral li {
+  margin-bottom: 1rem;
+}
+.menu-lateral a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+.right {
+  margin-top: 4rem;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+  height: calc(100% - 12rem);
+}
+.btn {
+  background-color: #08887d;
+  color: aliceblue;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0.2rem 0.1rem 0.2rem lightgrey;
+  cursor: pointer;
+}
+.btn--reset {
+  border-radius: 0.4rem;
+}
+
+/*
+#A1 {
+  background-color: #c4fffb;
+  text-align: center;
+  flex: 0 0 200px;
+  height: 100vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#A2 {
+  background-color: #c4fffb;
+  text-align: center;
+  flex: 0 0 200px;
+  height: 100vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+*/
