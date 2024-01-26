@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap');
+
+@mixin fontFamily{
+    font-family: 'Source Sans 3';
+    font-size: $fontSize;
+}
+
+@mixin options{
+    padding: 10px;
+    text-decoration: none;
+    color: $optionsFontColor;
+}
+
+$postBG: #e5fffc;
+$fontSize: 16px;
+$optionsFontColor: #636363;
+
+.chirp-big{
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: $postBG;
+    padding: 10px;
+    border-radius: 17px;
+}
+
+.post-heading{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    @include fontFamily;
+}
+
+.text-container{
+    display: block;
+    width: auto;
+    @include fontFamily;
+
+}
+
+.post-interactions{
+    align-self: flex-end;
+}
+
+.username{
+    position: relative;
+    left: 10px;
+    bottom: 7px;
+}
+
+#dots{
+    position: relative;
+    right: 7px;
+    top: 7px;
+}
+
+#popup-menu {
+    float: left;
+    position: relative;
+    top: -50;
+    left: 50;
+    background-color: darken($postBG, 5%);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: none; /* Hide the popup initially */
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#popup-menu a {
+    @include options;
+}
+
+#popup-menu a:hover {
+    color: darken($color: $optionsFontColor, $amount: 40%);
+}

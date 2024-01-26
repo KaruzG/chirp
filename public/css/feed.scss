@@ -1,0 +1,50 @@
+@import './vars.css';
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas:
+        'header header header'
+        'nav main aside';
+    height: 100vh;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: bisque;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: var(--menuBg);
+    align-items: center;
+    justify-items: center;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+
+        li {
+            a {
+                text-decoration: none;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--pageBg);
+}
+
+.section {
+    grid-area: aside;
+    background-color: blueviolet;
+}

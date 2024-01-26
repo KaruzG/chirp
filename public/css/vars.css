@@ -3,14 +3,21 @@
         /* WHITE */
         --white: #FAFAFA;
         --gray: #eff1f5;
+        --pageBg: #eaeaea;
 
         /* GREEN */
         --mainGreen: #08887d;
+        --chirpLightGreen2: #86cac3;
         --chirpLightGreen: #bbf0eb;
-        --lightBg: #e5fffc;
+        --chirpBg: #e5fffc;
+        --menuBg: #c4fffb;
         --details: #31efb8;
+
+        /* BLACK */
+        --black: rgb(45, 45, 45); /* Not that agresive black */
         
     /* SHADOWS */
         /* TEXT */
         --textShadow: 2px 2px 3px rgba(0,0,0,0.3);
+
     }
