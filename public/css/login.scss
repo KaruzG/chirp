@@ -1,4 +1,16 @@
 @import 'vars.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap');
+
+@mixin heading{
+    font-family: Syne;
+    font-weight: 600;
+}
+
+@mixin text{
+    font-family: 'Source Sans 3';
+    font-weight: 500;
+}
+
 .page{
     display: grid;
     grid-template-columns: 1fr;
@@ -13,16 +25,16 @@
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    border: 1px solid black;
     margin: 20px;
     padding: 30px;
     grid-area: main;
     border-radius: 15px;
-    background-color: var(--lightBg);
+    background-color: var(--chirpBg);
 }
 
 .heading{
     text-align: center;
+    @include heading;
 }
 
 .form{
@@ -35,15 +47,17 @@
         padding: 10px;
         min-width: 230px;
         max-width: 400px;
-        background-color: var(--lightBg);
+        background-color: var(--chirpBg);
         border: 1px solid var(--details);
+
     }
 }
 
 hr{
-    border-color: var(--details);
+    border-color: lighten(var(--details), 50%);
 }
 
 .create{
     text-align: center;
+    @include text;
 }
