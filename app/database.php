@@ -5,7 +5,7 @@ class Database {
 
     // DB CONNECTOR (Returns PDO connection object)
     private function openDb() {
-        include "../config.php";
+        include "config.php";
  
         try {
               $conn = new PDO(
@@ -32,15 +32,19 @@ class Database {
     }
 
     public function createRecord($tableName, $data) {
-        $conn = openDb();
+        $conn = $this->openDb();
 
-        $stm = "INSERT INTO $tableName VALUES $data";
+        echo $data;
+
+        $stm = "INSERT INTO $tableName VALUES ($data)";
 
         if ($conn->query($stm) == true) {
             echo "Yay";
         } else {
             echo "ERROR: CREATE failed." . $conn->error;
         }
+
+        $this->closeDb($conn);
     }
 
     public function readRecords($tableName, $condition = null) {
