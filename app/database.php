@@ -1,12 +1,10 @@
 <?php
 // This class will handle connections to the DB and basic CRUD actions
+include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
 
 class Database {
-
     // DB CONNECTOR (Returns PDO connection object)
-    private function openDb() {
-        include "config.php";
- 
+    private function openDb() { 
         try {
               $conn = new PDO(
                 "mysql:host=". SERVERNAME .";dbname=chirp", 
