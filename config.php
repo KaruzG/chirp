@@ -1,11 +1,12 @@
 <?php
+// CONFIGURATION FILE FOR CHIRP APP
 
-    /* ................ DATABASE CONFIG ................ */
+    // DATABASE CONFIG
 
-    /* DATABASE LOCATION*/
+        // DATABASE LOCATION
     define("SERVERNAME", "localhost");
 
-    /* USERNAME and PASSWORD  */
+        // USERNAME and PASSWORD
     define("USERNAME", "root");
     define("PASSWORD", "password");
 
