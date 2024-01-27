@@ -15,8 +15,6 @@ class Database {
               $conn->setAttribute(PDO::ATTR_ERRMODE, 
                           PDO::ERRMODE_EXCEPTION);
 
-              echo "Connected successfully";
-
               return $conn;
 
             } catch(PDOException $e) {
@@ -32,26 +30,47 @@ class Database {
     public function createRecord($tableName, $data) {
         $conn = $this->openDb();
 
-        echo $data;
+        switch($tableName) {
+            case "users":
+                $stm = "INSERT INTO $tableName(username, email, password_hash) VALUES ($data)";
+            default:
+                throw New Error("Table ($tablename) not found in database.");
 
-        $stm = "INSERT INTO $tableName VALUES ($data)";
+        }
 
-        if ($conn->query($stm) == true) {
-            echo "Yay";
-        } else {
-            echo "ERROR: CREATE failed." . $conn->error;
+        if ($conn->query($stm) == false) {
+            // echo "ERROR: CREATE failed." . $conn->error;
         }
 
         $this->closeDb($conn);
+        return true;
     }
 
     public function readRecords($tableName, $condition = null) {
+        $conn = $this->openDb();
+
+        // ...
+
+        $this->closeDb($conn);
+        return true;
     }
 
     public function updateRecord($tableName, $data, $condition) {
+        $conn = $this->openDb();
+
+        // ...
+
+        $this->closeDb($conn);
+        return true;
     }
 
     public function deleteRecord($tableName, $condition) {
+        $conn = $this->openDb();
+
+        // ...
+
+        $this->closeDb($conn);
+        return true;
     }
 }
 ?>
