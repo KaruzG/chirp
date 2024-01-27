@@ -23,7 +23,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
+  min-width: 450px;
+  max-width: 600px;
   padding: 80px;
   border-radius: 15px;
   background-color: var(--chirpBg);
