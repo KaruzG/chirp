@@ -3,7 +3,7 @@
 .container {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.3fr 1fr 0.3fr;
 
     grid-template-areas:
         'header header header'
@@ -14,37 +14,47 @@
 
 .header {
     grid-area: header;
-    background-color: bisque;
 }
 
 .nav {
+    display: flex;
     grid-area: nav;
     background-color: var(--menuBg);
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 
     ul {
+        position: relative;
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        justify-items: center;
-        text-align: center;
+        justify-content: center;
+        text-align: left;
 
         li {
+            margin: 10px;
             a {
                 text-decoration: none;
                 padding: 10px;
+                color: var(--black);
+                font-family: var(--regularText);
             }
         }
     }
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: main;
     background-color: var(--pageBg);
+    chirp-box{
+        margin-top: 15px;
+    }
 }
 
 .section {
     grid-area: aside;
-    background-color: blueviolet;
+    background-color: var(--pageBg);
 }

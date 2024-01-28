@@ -10,28 +10,32 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/chirpbox.css">
     <link rel="stylesheet" href="../css/feed.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/vars.css">
     <script src="../../components/chirpbox.js"></script>
+    <script src="../../components/chirpHeader.js"></script>
 
 </head>
 
 <body>
     <div class="container">
         <!--Header (The component will be imported later)-->
-        <header class="header"></header>
+        <chirp-header class="header"></chirp-header>
 
         <!-- Left side of the screen -->
         <nav class="nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Saved</a></li>
-                <li><a href="">Profile</a></li>
-                <li><a href="">Settings</a></li>
+                <li><a href=""><img src="" alt="">Home</a></li>
+                <li><a href=""><img src="" alt="">Saved</a></li>
+                <li><a href=""><img src="" alt="">Profile</a></li>
+                <li><a href=""><img src="" alt="">Settings</a></li>
             </ul>
         </nav>
 
         <!--Main column-->
         <main class="main">
             <div class="post-box"></div>
+            <chirp-box></chirp-box>
             <chirp-box></chirp-box>
             <chirp-box></chirp-box>
         </main>
