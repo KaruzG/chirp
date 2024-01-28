@@ -97,12 +97,12 @@ class Chirp extends HTMLElement {
         let reportChirp = document.createElement("a");
         reportChirp.href = "#";
         reportChirp.id = "report";
-        reportChirp.innerText = "Report Chirp";
+        reportChirp.innerText = "Report";
 
         let shareChirp = document.createElement("a");
         shareChirp.href = "#";
         shareChirp.id = "share";
-        shareChirp.innerText = "Share Chirp";
+        shareChirp.innerText = "Share";
 
         dropdown.appendChild(reportChirp);
         dropdown.appendChild(shareChirp);
@@ -111,7 +111,7 @@ class Chirp extends HTMLElement {
 
     //Dropdown functionality
     setupDropdown() {
-        const dots = this.querySelector('#dots');
+        const dots = this.querySelector('.actions');
         const actionsMenu = this.querySelector("#popup-menu");
 
         dots.addEventListener('click', (e) => {

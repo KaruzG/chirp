@@ -31,6 +31,14 @@ $optionsFontColor: #636363;
     align-content: center;
     justify-content: space-between;
     @include fontFamily;
+    .actions{
+        position: relative;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 }
 
 .text-container{
@@ -52,15 +60,14 @@ $optionsFontColor: #636363;
 
 #dots{
     position: relative;
-    right: 7px;
-    top: 7px;
+    justify-self: center;
 }
 
 #popup-menu {
-    float: left;
-    position: relative;
-    top: -50;
-    left: 50;
+    position: absolute;
+    left: 0;
+    top: 80%;
+    min-width: fit-content;
     background-color: darken($postBG, 5%);
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -76,5 +83,5 @@ $optionsFontColor: #636363;
 }
 
 #popup-menu a:hover {
-    color: darken($color: $optionsFontColor, $amount: 40%);
+    color: darken($color: $optionsFontColor, $amount: 80%);
 }
