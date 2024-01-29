@@ -24,7 +24,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1;
 }
 
 .text-container {
