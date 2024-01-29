@@ -1,5 +1,10 @@
 @import './vars.css';
+body {
+  margin: 0;
+}
+
 .container {
+  margin: 0;
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: 0.3fr 1fr 0.3fr;
