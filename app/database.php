@@ -49,7 +49,20 @@ class Database {
     public function readRecords($tableName, $condition = null) {
         $conn = $this->openDb();
 
-        // ...
+        if ($condition === null) {
+            $stm = $conn->prepare("SELECT * FROM $tableName");
+            $stm->setFetchMode(PDO::FETCH_ASSOC);
+            $stm->execute();
+
+            $this->closeDb($conn);
+            return $stm->fetchAll();
+        }
+
+        $stm = $conn->prepare("SELECT * FROM $tableName WHERE $condition");
+        $stm->setFetchMode(PDO::FETCH_ASSOC);
+        $stm->execute();
+
+        return $stm->fetch();
 
         $this->closeDb($conn);
         return true;
