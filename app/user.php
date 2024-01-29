@@ -12,7 +12,9 @@ class User{
         $this->db->createRecord("users", "'$name', '$email', '$password'");
     }
 
-    public function read() {
+    public function read($email) {
+        $userInfo = $this->db->readRecord($users, "email = $email");
+        return $userInfo;
     }
 
     public function update($id, $parameter, $value) {
