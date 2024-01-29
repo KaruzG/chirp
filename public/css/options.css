@@ -9,7 +9,7 @@ a {
   text-decoration: none;
 }
 .container {
-  max-width: 1224px;
+  /*max-width: 1224px;*/
   margin: 0 auto;
 }
 .menu {
