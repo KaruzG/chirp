@@ -38,6 +38,12 @@
                 padding: 10px;
                 color: var(--black);
                 font-family: var(--regularText);
+                img{
+                    position: relative;
+                    top: 8px;
+                    right: 5px;
+                    margin: 5px;
+                }
             }
         }
     }

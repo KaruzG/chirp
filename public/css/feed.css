@@ -35,6 +35,12 @@
   color: var(--black);
   font-family: var(--regularText);
 }
+.nav ul li a img {
+  position: relative;
+  top: 8px;
+  right: 5px;
+  margin: 5px;
+}
 
 .main {
   display: flex;
