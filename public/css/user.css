@@ -31,7 +31,7 @@ section#userInfo div div#userInfo {
 }
 section#userInfo div div#userInfo div:nth-child(1) {
   width: 100%;
-  gap: 1em;
+  gap: 2em;
   align-items: center;
 }
 section#userInfo div div#userInfo div:nth-child(1) span {
@@ -66,7 +66,14 @@ section#userInfo div div#userInfo div:nth-child(2) {
 }
 section#userInfo div div#userInfo div:nth-child(2) table {
   justify-content: space-between;
+  align-content: center;
   width: 100%;
+}
+@media screen and (min-width: 520px) {
+  section#userInfo div div#userInfo div:nth-child(2) table {
+    margin-left: 3em;
+    width: 70%;
+  }
 }
 section#userInfo div div#userInfo div:nth-child(2) table tr {
   justify-content: space-between;
@@ -83,4 +90,21 @@ main h2 {
   width: 100vw;
   text-align: left;
   margin-left: 1.5em;
+}
+main div#featChirps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 520px) {
+  section#userInfo {
+    max-width: 560px;
+  }
+  main {
+    max-width: 900px;
+  }
 }/*# sourceMappingURL=user.css.map */

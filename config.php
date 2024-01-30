@@ -5,7 +5,7 @@
         define('ROOT_DIR', $_SERVER['DOCUMENT_ROOT']);
 
 
-    /* ................ DATABASE CONFIG ................ */
+    // DATABASE CONFIG
 
         // DATABASE LOCATION
         define('SERVERNAME', "localhost");

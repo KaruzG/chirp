@@ -29,17 +29,18 @@ class Database {
 
     public function createRecord($tableName, $data) {
         $conn = $this->openDb();
-
         switch($tableName) {
-            case "users":
+            case 'users':
                 $stm = "INSERT INTO $tableName(username, email, password_hash) VALUES ($data)";
+                break;
             default:
-                throw New Error("Table ($tablename) not found in database.");
-
+                throw New Error("Table ($tableName) not found in database.");
+                return false;
         }
 
         if ($conn->query($stm) == false) {
-            // echo "ERROR: CREATE failed." . $conn->error;
+            echo "ERROR: CREATE failed." . $conn->error;
+            return false;
         }
 
         $this->closeDb($conn);
@@ -49,10 +50,22 @@ class Database {
     public function readRecords($tableName, $condition = null) {
         $conn = $this->openDb();
 
-        // ...
+        if ($condition === null) {
+            $stm = $conn->prepare("SELECT * FROM $tableName");
+            $stm->setFetchMode(PDO::FETCH_ASSOC);
+            $stm->execute();
+
+            $this->closeDb($conn);
+            return $stm->fetchAll();
+        }
+
+        $stm = $conn->prepare("SELECT * FROM $tableName WHERE $condition");
+        $stm->setFetchMode(PDO::FETCH_ASSOC);
+        $stm->execute();
+
+        return $stm->fetch();
 
         $this->closeDb($conn);
-        return true;
     }
 
     public function updateRecord($tableName, $data, $condition) {
