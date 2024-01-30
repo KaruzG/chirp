@@ -38,10 +38,17 @@ class User{
         $userInfo = $this->read($userEmail);
 
         if(password_verify($password, $userInfo['password_hash'])) {
+            session_start();
+            $_SESSION["logged_user"] = $userInfo['user_id'];
             return true;
         } else {
             return false;
         }
+    }
+
+    public function closeSession() {
+        session_destroy();
+        header("Location: $ROOT_DIR/public/pages/login.php");
     }
 }
 ?>
