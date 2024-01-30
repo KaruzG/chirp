@@ -8,12 +8,19 @@ class User{
     }
 
     public function create($name, $email, $password) {
-        // Needs to check email, and hash password before. Probably better in JS
+
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        // Needs to check email Probably better in JS
         $this->db->createRecord("users", "'$name', '$email', '$password'");
     }
 
     public function read($email) {
-        $userInfo = $this->db->readRecord($users, "email = $email");
+        $userInfo = $this->db->readRecords("users", "email = '$email'");
+
+        if ($userInfo == null) {
+            return false;
+        }
+
         return $userInfo;
     }
 
@@ -22,6 +29,16 @@ class User{
 
 
     public function delete($id) {
+    }
+
+    public function validatePassword($password, $userEmail) {
+        $userInfo = $this->read($userEmail);
+
+        if(password_verify($password, $userInfo['password_hash'])) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 ?>
