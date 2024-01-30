@@ -53,6 +53,13 @@ main {
   background-color: var(--chirpBg);
   border: 1px solid var(--details);
 }
+.form #enviar {
+  background-color: rgba(49, 239, 184, 0.2);
+}
+.form #enviar:hover {
+  cursor: pointer;
+  background-color: rgba(49, 239, 184, 0.7);
+}
 
 hr {
   border-color: var(--details);
