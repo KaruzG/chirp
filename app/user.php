@@ -8,6 +8,9 @@ class User{
     }
 
     public function create($name, $email, $password) {
+        if($this->read($email) != false) {
+            return false;
+        }
 
         $password = password_hash($password, PASSWORD_DEFAULT);
         // Needs to check email Probably better in JS
