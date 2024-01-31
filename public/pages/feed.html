@@ -7,22 +7,22 @@
     <title>Chirpbox test</title>
 
     <!--Requirements-->
-    <link rel="stylesheet" href="../css/chirpbox.css">
-    <link rel="stylesheet" href="../css/feed.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="/public/css/chirpbox.css">
+    <link rel="stylesheet" href="/public/css/feed.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
 
-    <script defer src="../../components/chirpbox.js"></script>
-    <script defer src="../../components/chirpHeader.js"></script>
+
+    <script defer src="/components/chirpbox.js"></script>
+    <script defer src="/components/chirpHeader.js"></script>
 
 </head>
 
 <body>
-    <div class="container">
-        <!--Header (The component will be imported later)-->
-        <chirp-header class="header"></chirp-header>
+        <chirp-header></chirp-header>
 
         <!-- Left side of the screen -->
-        <nav class="nav">
+        <nav>
             <ul>
                 <li><a href=""><img src="../img/Home.png" alt="">Home</a></li>
                 <li><a href=""><img src="../img/Bookmark.png" alt="">Saved</a></li>
@@ -32,7 +32,7 @@
         </nav>
 
         <!--Main column-->
-        <main class="main">
+        <main>
             <div class="post-box"></div>
             <chirp-box></chirp-box>
             <chirp-box></chirp-box>
@@ -44,7 +44,6 @@
             <div></div>
             <div></div>
         </aside>
-    </div>
 </body>
 
 </html>
