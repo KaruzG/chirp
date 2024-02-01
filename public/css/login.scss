@@ -66,6 +66,13 @@ main{
         border: 1px solid var(--details);
 
     }
+    #enviar{
+        background-color: transparentize($color: #31efb8, $amount: 0.8);
+        &:hover{
+            cursor: pointer;
+            background-color: transparentize($color: #31efb8, $amount: 0.3);
+        }
+    }
 }
 
 hr{

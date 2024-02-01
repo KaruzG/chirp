@@ -8,11 +8,23 @@ class User{
     }
 
     public function create($name, $email, $password) {
-        // Needs to check email, and hash password before. Probably better in JS
+        if($this->read($email) != false) {
+            return false;
+        }
+
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        // Needs to check email Probably better in JS
         $this->db->createRecord("users", "'$name', '$email', '$password'");
     }
 
-    public function read() {
+    public function read($email) {
+        $userInfo = $this->db->readRecords("users", "email = '$email'");
+
+        if ($userInfo == null) {
+            return false;
+        }
+
+        return $userInfo;
     }
 
     public function update($id, $parameter, $value) {
@@ -20,6 +32,23 @@ class User{
 
 
     public function delete($id) {
+    }
+
+    public function validatePassword($password, $userEmail) {
+        $userInfo = $this->read($userEmail);
+
+        if(password_verify($password, $userInfo['password_hash'])) {
+/*             session_start(); SHOULD BE A LOGINFUNC!
+            $_SESSION["logged_user"] = $userInfo['user_id']; */
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function closeSession() {
+        session_destroy();
+        header("Location: $ROOT_DIR/public/pages/login.php");
     }
 }
 ?>

@@ -7,6 +7,7 @@
     <title>Chirp Login</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/signup.js"></script>
 </head>
 
 <body>
@@ -18,15 +19,16 @@
                 <h2>Welcome to CHIRP!</h2>
             </div>
             <div class="container">
-                <form class="form" action="POST">
-                    <input id="email" type="text" placeholder="Enter your email"></input><br>
-                    <input id="username" type="text" placeholder="Create a username"></input>
-                    <input id="password" type="text" placeholder="Create a password"></input>
-                    <input id="password" type="text" placeholder="Repeat the password"></input>
+                <form class="form" action="#" method="POST">
+                    <input id="email" type="email" placeholder="Enter your email"></input>
+                    <input id="email2" type="email" placeholder="Repeat your email"></input>
+                    <input id="password" type="password" placeholder="Create a password"></input>
+                    <input id="password2" type="password" placeholder="Repeat the password"></input>
+                    <input type="submit" id="enviar" value="Sign Up"></input>
                 </form>
                 <hr>
                 <div class="create">
-                    <p>Already have an account? <a href="#">Log in</a></p>
+                    <p>Already have an account? <a href="./login.html">Log in</a></p>
                 </div>
             </div>
 
