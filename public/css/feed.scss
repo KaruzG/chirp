@@ -1,50 +1,99 @@
 @import './vars.css';
 
-.container {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(3, 1fr);
-
-    grid-template-areas:
-        'header header header'
-        'nav main aside';
+nav {
+    z-index: 2;
+    position: sticky;
+    left: 0;
     height: 100vh;
-
-}
-
-.header {
-    grid-area: header;
-    background-color: bisque;
-}
-
-.nav {
-    grid-area: nav;
+    width: max-content;
+    padding: 3em;
+    
+    display: flex;
     background-color: var(--menuBg);
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 
     ul {
+        position: relative;
+        top: -10%;
+        left: -5%;
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        justify-items: center;
-        text-align: center;
+        justify-content: center;
+        text-align: left;
 
         li {
+            margin: 10px;
+
             a {
                 text-decoration: none;
                 padding: 10px;
+                color: var(--black);
+                font-family: var(--regularText);
+
+                img {
+                    position: relative;
+                    top: 8px;
+                    right: 5px;
+                    margin: 5px;
+                }
+
+                &:hover {
+                    font-weight: bolder;
+                }
             }
         }
     }
 }
 
-.main {
-    grid-area: main;
+main {
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    top: 56px;
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    padding: 1em;
+
+    flex-direction: column;
+    align-items: center;
     background-color: var(--pageBg);
+
+    chirp-box {
+        margin-top: 15px;
+    }
 }
 
 .section {
     grid-area: aside;
-    background-color: blueviolet;
+    background-color: var(--pageBg);
+}
+
+@media only screen and (max-width: 950px) {
+    #headerDropdownOuter {
+        z-index: 2;
+    }
+
+    nav {
+        display: none;
+        /* Hide the navigation on mobile */
+    }
+
+    .section {
+        display: none;
+        /* Hide the aside section on mobile */
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    #headerDropdownOuter {
+        z-index: 2;
+    }
+
+    .section {
+        display: none;
+        /* Hide the aside section on mobile */
+    }
 }

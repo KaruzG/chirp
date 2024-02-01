@@ -20,4 +20,9 @@
         /* TEXT */
         --textShadow: 2px 2px 3px rgba(0,0,0,0.3);
 
+    /* FONTS */
+        /* TEXT */
+        --regularText: 'Source Sans 3';
+        --titles: Syne;
+
     }

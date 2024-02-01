@@ -57,7 +57,7 @@
   background-color: #ccfff9;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 0;
   display: none; /* Hide the popup initially */
   align-items: center;
   align-content: center;
@@ -72,4 +72,12 @@
 
 #popup-menu a:hover {
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  #popup-menu {
+    position: absolute;
+    left: -25px;
+    top: 80%;
+  }
 }/*# sourceMappingURL=chirpbox.css.map */
