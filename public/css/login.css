@@ -1,0 +1,73 @@
+@import 'vars.css';
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap");
+main {
+  align-content: center;
+  align-items: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--mainGreen);
+  min-height: 50px;
+}
+
+.outer-container {
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 450px;
+  max-width: 600px;
+  padding: 80px;
+  border-radius: 15px;
+  background-color: var(--chirpBg);
+  box-shadow: var(--textShadow);
+}
+
+.heading {
+  text-align: center;
+  font-family: Syne;
+  font-weight: 600;
+}
+
+.form {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+}
+.form input {
+  margin: 10px;
+  padding: 10px;
+  min-width: 230px;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: var(--chirpBg);
+  border: 1px solid var(--details);
+}
+.form #enviar {
+  background-color: rgba(49, 239, 184, 0.2);
+}
+.form #enviar:hover {
+  cursor: pointer;
+  background-color: rgba(49, 239, 184, 0.7);
+}
+
+hr {
+  border-color: var(--details);
+}
+
+.create {
+  margin: 15px;
+  text-align: center;
+  font-family: "Source Sans 3";
+  font-weight: 500;
+}/*# sourceMappingURL=login.css.map */

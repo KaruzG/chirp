@@ -1,0 +1,86 @@
+@import 'vars.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap');
+
+@mixin heading{
+    font-family: Syne;
+    font-weight: 600;
+}
+
+@mixin text{
+    font-family: 'Source Sans 3';
+    font-weight: 500;
+}
+
+// $color: --details;
+$hr: var(--details);
+
+main{
+    align-content: center;
+    align-items: center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; // Ensure the page takes at least the full viewport height
+  }
+
+.header{
+    background-color: var(--mainGreen);
+    min-height: 50px;
+}
+
+.outer-container {
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 450px;
+    max-width: 600px;
+    padding: 80px;
+    border-radius: 15px;
+    background-color: var(--chirpBg);
+    box-shadow: var(--textShadow);
+  }
+
+.heading{
+    text-align: center;
+    @include heading;
+}
+
+.form{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    input{
+        margin: 10px;
+        padding: 10px;
+        min-width: 230px;
+        max-width: 400px;
+        border-radius: 10px;
+        background-color: var(--chirpBg);
+        border: 1px solid var(--details);
+
+    }
+    #enviar{
+        background-color: transparentize($color: #31efb8, $amount: 0.8);
+        &:hover{
+            cursor: pointer;
+            background-color: transparentize($color: #31efb8, $amount: 0.3);
+        }
+    }
+}
+
+hr{
+    border-color: var(--details);
+}
+
+.create{
+    margin: 15px;
+    text-align: center;
+    @include text;
+}
