@@ -37,12 +37,16 @@ class User{
         $userInfo = $this->read($userEmail);
 
         if(password_verify($password, $userInfo['password_hash'])) {
-/*             session_start(); SHOULD BE A LOGINFUNC!
-            $_SESSION["logged_user"] = $userInfo['user_id']; */
             return true;
         } else {
             return false;
         }
+    }
+
+    public function loginUser($userEmail) {
+        $userInfo = $this->read($userEmail);
+        session_start();
+        $_SESSION["logged_user"] = $userInfo['email'];
     }
 
     public function closeSession() {
