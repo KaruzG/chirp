@@ -51,18 +51,25 @@ document.addEventListener('DOMContentLoaded', function () {
         form.insertBefore(username, form.querySelector('#enviar'));
 
         // Change the submit button value and functionality
-        const submitButton = document.getElementById('enviar');
+        submitButton = document.getElementById('enviar');
         submitButton.value = 'Continue';
 
         // Prevent the form from submitting for now, as the user needs to choose a username
         event.preventDefault();
-    });
 
-    form.addEventListener('submit', function (event) {
-        // Add validation for the entire form, including the username if needed
-
-        // Submit the form or perform other actions here
-
-        alert('Account created successfully!');
+        submitButton.addEventListener('click', function () {
+            // Additional validation for the username
+            const username = document.getElementById('username').value;
+    
+            if (username.trim === '') {
+                alert('Please enter a valid username.');
+                return;
+            }
+    
+            // Allow the form to submit after validating the username
+            form.submit();
+    
+            window.location.href = './login.html';
+        });
     });
 });

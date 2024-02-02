@@ -18,7 +18,8 @@ class Database {
               return $conn;
 
             } catch(PDOException $e) {
-              echo "Connection failed: " . $e->getMessage();
+                error_log("Database connection failed: " . $e->getMessage());
+                throw new Exception("Database connection failed");
         }
 
     }
@@ -29,23 +30,23 @@ class Database {
 
     public function createRecord($tableName, $data) {
         $conn = $this->openDb();
-        switch($tableName) {
+        switch ($tableName) {
             case 'users':
-                $stm = "INSERT INTO $tableName(username, email, password_hash) VALUES ($data)";
+                $stm = "INSERT INTO $tableName (username, email, password_hash) VALUES ($data)";
                 break;
             default:
-                throw New Error("Table ($tableName) not found in database.");
-                return false;
+                throw new Exception("Table ($tableName) not found in database.");
         }
-
-        if ($conn->query($stm) == false) {
+    
+        if ($conn->query($stm) === false) {
             echo "ERROR: CREATE failed." . $conn->error;
             return false;
         }
-
+    
         $this->closeDb($conn);
         return true;
     }
+    
 
     public function readRecords($tableName, $condition = null) {
         $conn = $this->openDb();

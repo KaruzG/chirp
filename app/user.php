@@ -7,15 +7,29 @@ class User{
         $this->db = new Database();
     }
 
-    public function create($username, $email, $password) {
-        if($this->read($email) != false) {
+    public function create($name, $email, $password) {
+        if ($this->read($email) != false) {
             return false;
         }
-
+    
         $password = password_hash($password, PASSWORD_DEFAULT);
-        // Needs to check email Probably better in JS
-        $this->db->createRecord("users", "'$username', '$email', '$password'");
+    
+        // Use try-catch for better error handling
+        try {
+            // Enclose values in single quotes
+            $result = $this->db->createRecord("users", "'$name', '$email', '$password'");
+            if (!$result) {
+                throw new Exception("Failed to create user.");
+            }
+        } catch (Exception $e) {
+            error_log("User creation failed: " . $e->getMessage());
+            return false;
+        }
+    
+        return true;
     }
+    
+    
 
     public function read($email) {
         $userInfo = $this->db->readRecords("users", "email = '$email'");
