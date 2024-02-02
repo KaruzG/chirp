@@ -7,14 +7,14 @@ class User{
         $this->db = new Database();
     }
 
-    public function create($name, $email, $password) {
+    public function create($username, $email, $password) {
         if($this->read($email) != false) {
             return false;
         }
 
         $password = password_hash($password, PASSWORD_DEFAULT);
         // Needs to check email Probably better in JS
-        $this->db->createRecord("users", "'$name', '$email', '$password'");
+        $this->db->createRecord("users", "'$username', '$email', '$password'");
     }
 
     public function read($email) {
