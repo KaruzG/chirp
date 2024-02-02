@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
 chirp-header {
+  position: fixed;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;

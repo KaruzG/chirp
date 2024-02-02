@@ -1,10 +1,11 @@
 @import './vars.css';
 nav {
-  z-index: 2;
-  position: sticky;
+  z-index: 0;
+  position: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   height: 100vh;
-  width: -moz-max-content;
   width: max-content;
   padding: 3em;
   display: flex;
@@ -44,10 +45,8 @@ nav ul li a:hover {
 main {
   z-index: -1;
   display: flex;
-  position: absolute;
   top: 56px;
   width: 100vw;
-  height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
   padding: 1em;

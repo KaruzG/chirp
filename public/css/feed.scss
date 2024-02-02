@@ -1,8 +1,10 @@
 @import './vars.css';
 
 nav {
-    z-index: 2;
-    position: sticky;
+    z-index: 0;
+    position: 0;
+    position: fixed;
+    top: 0;
     left: 0;
     height: 100vh;
     width: max-content;
@@ -50,7 +52,6 @@ nav {
 main {
     z-index: -1;
     display: flex;
-    position: absolute;
     top: 56px;
     width: 100vw;
     height: fit-content;
