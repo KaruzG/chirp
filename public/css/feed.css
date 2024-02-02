@@ -1,4 +1,8 @@
 @import './vars.css';
+body {
+  overflow-x: hidden;
+}
+
 nav {
   z-index: 0;
   position: 0;
@@ -6,6 +10,7 @@ nav {
   top: 0;
   left: 0;
   height: 100vh;
+  width: -moz-max-content;
   width: max-content;
   padding: 3em;
   display: flex;
@@ -47,6 +52,7 @@ main {
   display: flex;
   top: 56px;
   width: 100vw;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
   padding: 1em;
