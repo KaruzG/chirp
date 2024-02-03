@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
 chirp-header {
+  overflow: visible;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: var(--mainGreen);
@@ -17,6 +19,11 @@ chirp-header button#headerDropdownButton {
 chirp-header button#headerDropdownButton img {
   width: 30px;
   height: 30px;
+}
+@media screen and (min-width: 650px) {
+  chirp-header button#headerDropdownButton {
+    display: none;
+  }
 }
 chirp-header a#logoHeader {
   font-size: large;
@@ -62,4 +69,37 @@ chirp-header div#headerDropdownOuter ul div.headerDropdown-user a {
   font-size: large;
   color: var(--black);
   font-style: italic;
+}
+chirp-header div#desktopUser {
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  gap: 10px;
+  margin-right: 2vw;
+  display: none;
+  flex-direction: row;
+  height: 56px;
+}
+chirp-header div#desktopUser input {
+  border: 0px solid var(--chirpLightGreen2);
+  height: 60%;
+  border-radius: 20px;
+  background-color: var(--darkGreen);
+  padding: 10px;
+  max-width: 150px;
+  font-size: large;
+  color: rgb(211, 211, 211);
+}
+chirp-header div#desktopUser img {
+  width: 40px;
+  border-radius: 100vw;
+}
+chirp-header div#desktopUser h3 {
+  color: var(--white);
+}
+@media screen and (min-width: 650px) {
+  chirp-header div#desktopUser {
+    display: flex;
+  }
 }/*# sourceMappingURL=header.css.map */

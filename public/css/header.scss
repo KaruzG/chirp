@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
 
 chirp-header {
+    overflow: visible;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: var(--mainGreen);
@@ -19,6 +21,10 @@ chirp-header {
         img {
             width: 30px;
             height: 30px;
+        }
+
+        @media screen and (min-width: 650px) {
+            display: none;
         }
     }
 
@@ -72,6 +78,42 @@ chirp-header {
                     @include mixins.userName();
                 }
             }
+        }
+    }
+
+    div#desktopUser {
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-items: center;
+        gap: 10px;
+        margin-right: 2vw;
+        display: none;
+        flex-direction: row;
+        height: 56px;
+
+        input {
+            border: 0px solid var(--chirpLightGreen2);
+            height: 60%;
+            border-radius: 20px;
+            background-color: var(--darkGreen);
+            padding: 10px;
+            max-width: 150px;
+            font-size: large;
+            color: rgb(211, 211, 211);
+        }
+
+        img {
+            width: 40px;
+            border-radius: 100vw;
+        }
+
+        h3 {
+            color: var(--white);
+        }
+
+        @media screen and (min-width: 650px) {
+            display: flex;
         }
     }
 }
