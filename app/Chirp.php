@@ -13,5 +13,13 @@ class Chirp{
 
         $this->db->createRecord("tweets", $data);
     }
+
+    public function readChirpByID($id) {
+        return $this->db->readRecords("tweets", "tweet_id = '$id'");
+    }
+
+    public function renderChirp($id) { // Not tested
+        echo "<chirp-box chirpID=$id></chirp-box>";
+    }
 }
 ?>
