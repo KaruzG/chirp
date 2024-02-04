@@ -4,25 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirpbox test</title>
+    <title>Welcome to chirp</title>
 
     <!--Requirements-->
-    <link rel="stylesheet" href="/public/css/chirpbox.css">
-    <link rel="stylesheet" href="/public/css/feed.css">
-    <link rel="stylesheet" href="/public/css/header.css">
-    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="../css/feed.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/welcome.css">
 
-
-    <script defer src="/components/chirpbox.js"></script>
-    <script defer src="/components/chirpHeader.js"></script>
+    <script defer src="../../components/chirpHeader.js"></script>
 
 </head>
 
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <chirp-header></chirp-header>
+    </header>
     <!--Main column-->
     <main>
-        <div class="outer-container"></div>
+        <div class="outer-container">
+            <h1 class="subtitle">Welcome to Chirp!</h1>
+            <p>Chirp is a social media platform where to share what you are up to with all your friends and family</p>
+            <p>Create an account now and start  sharing your thoughts with the world!</p>
+            <div class="buttons">
+                <button id="Register" href="./create.html">Create an account</button>
+                <button id="LogIn" href="./login.html">Log in</button>
+            </div>
+        </div>
     </main>
 </body>
 

@@ -1,0 +1,62 @@
+@import 'vars.css';
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap");
+
+@mixin title {
+    font-family: Syne;
+    font-size: 3em;
+}
+
+@mixin textSpacing{
+    padding: 10px;
+    margin: 10px;
+}
+
+@mixin button{
+    padding: 10px;
+    font-family: 'Source Sans 3';
+    font-size: medium;
+    background-color: var(--menuBg);
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    &:hover{
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+}
+
+#headerDropdownButton{
+    display: none;
+}
+
+main{
+    margin: 0;
+    padding: 0;
+    background-color: var(--chirpBg);
+    display: flex;
+    flex-direction: column;
+    .outer-container{
+        position: relative;
+        top: 150px;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+        h1{
+            @include title;
+            @include textSpacing;
+        }
+        p{
+            font-family: 'Source Sans 3';
+            font-size: larger;
+            @include textSpacing;
+        }
+        .buttons{
+            button{
+                @include button;
+            }
+        }
+    }
+}
