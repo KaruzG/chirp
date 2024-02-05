@@ -9,6 +9,9 @@ chirp-header {
   width: 100vw;
   height: 3.5em;
 }
+chirp-header header {
+  overflow: visible;
+}
 chirp-header button#headerDropdownButton {
   position: absolute;
   right: 1em;
@@ -30,6 +33,7 @@ chirp-header a#logoHeader {
   text-shadow: var(--textShadow);
   font-family: "Sonsie One", system-ui;
   color: var(--white);
+  overflow: visible;
 }
 chirp-header div#headerDropdownOuter {
   position: absolute;
