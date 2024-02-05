@@ -7,10 +7,13 @@
     <title>Chirpbox test</title>
 
     <!--Requirements-->
+    <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/chirpbox.css">
     <link rel="stylesheet" href="/public/css/feed.css">
     <link rel="stylesheet" href="/public/css/header.css">
     <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/postChirp.css">
+    <link rel="stylesheet" href="/public/css/index.css">
 
 
     <script defer src="/components/chirpbox.js"></script>
@@ -20,7 +23,6 @@
 
 <body>
         <chirp-header></chirp-header>
-
         <!-- Left side of the screen -->
         <nav>
             <ul>
@@ -33,10 +35,19 @@
 
         <!--Main column-->
         <main>
-            <div class="post-box"></div>
-            <chirp-box></chirp-box>
-            <chirp-box></chirp-box>
-            <chirp-box></chirp-box>
+            <div id="postChirp">
+                <div>
+                    <img src="/public/img/defaultProfilePicture.jpg" alt="">
+                    <h2>@USERNAME</h2>
+                </div>
+                <div>
+                    <textarea name="" id=""></textarea>
+                    <div>
+                        <img src="/public/svg/img.svg" alt="">
+                        <button>POST</button>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Right side of the screen -->

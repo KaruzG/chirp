@@ -13,12 +13,11 @@ class User{
         }
 
         $password = password_hash($password, PASSWORD_DEFAULT);
-        // Needs to check email Probably better in JS
         $this->db->createRecord("users", "'$name', '$email', '$password'");
     }
 
-    public function read($email) {
-        $userInfo = $this->db->readRecords("users", "email = '$email'");
+    public function read($condition) {
+        $userInfo = $this->db->readRecords("users", $condition);
 
         if ($userInfo == null) {
             return false;
