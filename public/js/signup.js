@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.form');
-    form.addEventListener('submit', function (event) {
+    const enviar = document.querySelector('#enviar');
+    enviar.addEventListener('click', function (event) {
+
+        event.preventDefault();
+
         // Email validation
         const email = document.getElementById('email').value;
         const email2 = document.getElementById('email2').value;
 
         if (email.trim() === '' || email2.trim() === '' || email !== email2) {
             alert('Please enter valid and matching email addresses.');
-            event.preventDefault();
+            
             return;
         }
 
         // Email format validation (simple check for @ symbol)
         if (!/\S+@\S+\.\S+/.test(email)) {
             alert('Please enter a valid email address.');
-            event.preventDefault();
+            
             return;
         }
 
@@ -24,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (password.trim() === '' || password2.trim() === '' || password !== password2) {
             alert('Please enter valid and matching passwords.');
-            event.preventDefault();
+            
             return;
         }
 
         // Password format validation (no spaces in between)
         if (/\s/.test(password)) {
             alert('Password should not contain spaces.');
-            event.preventDefault();
+            
             return;
         }
 
@@ -54,15 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const submitButton = document.getElementById('enviar');
         submitButton.value = 'Continue';
 
-        // Prevent the form from submitting for now, as the user needs to choose a username
-        event.preventDefault();
-    });
-
-    form.addEventListener('submit', function (event) {
-        // Add validation for the entire form, including the username if needed
-
-        // Submit the form or perform other actions here
-
-        alert('Account created successfully!');
+        form.submit();
     });
 });
