@@ -1,14 +1,19 @@
 @import 'vars.css';
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap");
 
-@mixin title {
+@mixin title($size: 3em) {
     font-family: Syne;
-    font-size: 3em;
+    font-size: $size;
+}
+
+@mixin text{
+    font-family: 'Source Sans 3';
+    font-size: medium;
 }
 
 @mixin textSpacing{
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 15px;
 }
 
 @mixin button{
@@ -19,8 +24,10 @@
     margin: 10px;
     border: none;
     border-radius: 10px;
+    box-sizing: border-box;
     &:hover{
         border: 1px solid black;
+        box-sizing: border-box;
         cursor: pointer;
     }
     
@@ -37,18 +44,22 @@ main{
     display: flex;
     flex-direction: column;
     .outer-container{
-        position: relative;
-        top: 150px;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         height: auto;
-        padding: 5px;
+        margin: 20px;
+        padding: 15px;
         box-sizing: border-box;
+        align-items: center;
         text-align: center;
+        justify-content: center;
         h1{
             @include title;
             @include textSpacing;
         }
         p{
+            max-width: 70%;
             font-family: 'Source Sans 3';
             font-size: larger;
             @include textSpacing;
@@ -56,6 +67,18 @@ main{
         .buttons{
             button{
                 @include button;
+            }
+        }
+        .sections{
+            margin-top: 25px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            .features{
+                @include text;
+                h2{
+                    @include title(1.5em);
+                }
             }
         }
     }
