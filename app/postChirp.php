@@ -6,8 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/user.php";
 
 
 $chirpBody = $_POST['postText'];
-// $user = $_SESSION['logged_user'];
-$user = 1;
+$user = $_SESSION['logged_user'];
 
 // Validation
 if($user === null || $chirpBody === null) {
