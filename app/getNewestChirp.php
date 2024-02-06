@@ -1,7 +1,7 @@
 <?php
    include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-   include_once $_SERVER['DOCUMENT_ROOT']."/app/chirp.php";
-   include_once $_SERVER['DOCUMENT_ROOT']."/app/user.php";
+   include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/chirp.php";
+   include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/user.php";
    
    $chirp = New Chirp();
    $latestChirp = $chirp->lastChirp();
