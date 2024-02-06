@@ -2,8 +2,7 @@ function showPost($id) {
     let postBox = document.getElementById("post-box");
     let chirp = document.createElement("chirp-box");
     chirp.setAttribute("chirpId", $id);
-
-    postBox.appendChild(chirp);
+    postBox.appendChild(chirp)
 }
 
 async function getLastChirp() {
@@ -25,7 +24,6 @@ async function infiniteScroll() {
     let postToStart = await getLastChirp();
 
     for(let i = 0; i <= 5; i++) {
-        console.log(postToStart);
         showPost(postToStart)
         postToStart--
     }
@@ -35,7 +33,7 @@ async function infiniteScroll() {
         let documentHeight = document.body.scrollHeight;
         let currentScroll = window.scrollY + window.innerHeight;
         if(currentScroll == documentHeight) {
-            showPost(postToStart)
+            showPost(postToStart);
             postToStart--
         }
 
