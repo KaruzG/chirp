@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/app/user.php";
+include_once "./user.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get data from the form
