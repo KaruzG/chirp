@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirpbox test</title>
+    <title>Feed</title>
 
     <!--Requirements-->
+    <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/chirpbox.css">
     <link rel="stylesheet" href="/public/css/feed.css">
     <link rel="stylesheet" href="/public/css/header.css">
     <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/postChirp.css">
+    <link rel="stylesheet" href="/public/css/index.css">
 
     <script defer src="/components/chirpbox.js"></script>
     <script defer src="/components/chirpHeader.js"></script>
     <script defer src="/public/js/feedInfiniteChirps.js"></script>
+    <script defer src="/public/js/postChirp.js"></script>
 
 </head>
 
@@ -32,12 +36,25 @@
 
         <!--Main column-->
         <main>
+            <div id="postChirp">
+                <div>
+                    <img src="/public/img/defaultProfilePicture.jpg" alt="">
+                    <h2>@USERNAME</h2>
+                </div>
+                <div>
+                    <textarea name="" id="postChirpTextarea"></textarea>
+                    <div>
+                        <img src="/public/svg/img.svg" alt="">
+                        <button id="postChirpButton">POST</button>
+                    </div>
+                </div>
+            </div>
+            
             <div id="post-box">
 
             </div>
             <div id="loader">
                 <h1>...</h1>
-            </div>
         </main>
 
         <!-- Right side of the screen -->

@@ -48,8 +48,7 @@ nav ul li a:hover {
 }
 
 main {
-  z-index: -1;
-  overflow-y: scroll;
+  z-index: 1;
   display: flex;
   top: 56px;
   height: fit-content;
