@@ -3,6 +3,14 @@
    include_once $_SERVER['DOCUMENT_ROOT']."/app/chirp.php";
    include_once $_SERVER['DOCUMENT_ROOT']."/app/user.php";
    
-   
+   $chirp = New Chirp();
+   $latestChirp = $chirp->lastChirp();
 
+   header('Content-Type: application/json');
+
+   $response = array(
+      'lastChirp' => $latestChirp['MAX(tweet_id)'],
+   );
+
+   echo json_encode($response);
 ?>

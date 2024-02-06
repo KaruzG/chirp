@@ -1,16 +1,35 @@
-function infiniteScroll() {
-    // First posts
+function showPost($id) {
     let postBox = document.getElementById("post-box");
-    let chirptest = document.createElement("chirp-box");
-    chirptest.setAttribute("chirpId", 1);
+    let chirp = document.createElement("chirp-box");
+    chirp.setAttribute("chirpId", $id);
 
-    postBox.appendChild(chirptest);
-    postBox.appendChild(chirptest);
-    postBox.appendChild(chirptest);
-    postBox.appendChild(chirptest);
-    postBox.appendChild(chirptest);
-    postBox.appendChild(chirptest);
-    postBox.appendChild(chirptest);
+    postBox.appendChild(chirp);
+}
+
+async function getLastChirp() {
+    const response = await fetch("/app/getNewestChirp.php");
+
+    if (!response.ok) {
+        console.log("Error fetching last chirp!");
+        return false
+    }
+
+    let data = await response.json();
+
+    return data.lastChirp;
+}
+
+
+
+async function infiniteScroll() {
+    let postToStart = await getLastChirp();
+
+    console.log("a");
+    for(let i = 0; i <= 5; i++) {
+        console.log(postToStart);
+        showPost(postToStart)
+        postToStart--
+    }
 
 
     document.addEventListener('scroll', function(e) {
@@ -19,10 +38,13 @@ function infiniteScroll() {
         console.log(currentScroll);
         console.log(documentHeight);
         if(currentScroll == documentHeight) {
-            let chirp = document.createElement("chirp-box");
-            chirp.setAttribute("chirpId", 1);
+            showPost(postToStart)
+            postToStart--
+        }
 
-            postBox.appendChild(chirp);
+        if (postToStart === 0) {
+            console.log("No more posts!");
+            document.removeEventListener('scroll');
         }
     })
 
