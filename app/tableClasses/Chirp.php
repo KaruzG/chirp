@@ -2,7 +2,7 @@
 class Chirp{
     function __construct() {
         include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-        include_once ROOT_DIR . "/app/database.php";
+        include_once ROOT_DIR . "/app/main/database.php";
 
         $this->db = new Database();
     }
