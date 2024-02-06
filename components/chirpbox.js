@@ -17,7 +17,12 @@ class Chirp extends HTMLElement {
             throw new Error("Error fetching chirp data");
         }
 
-        return await response.json();
+        try {
+            return response.json();
+        } catch (e) {
+            console.log("esadoasod" + e);
+            return false
+        }
     }
 
     //Create elements

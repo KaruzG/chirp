@@ -24,7 +24,6 @@ async function getLastChirp() {
 async function infiniteScroll() {
     let postToStart = await getLastChirp();
 
-    console.log("a");
     for(let i = 0; i <= 5; i++) {
         console.log(postToStart);
         showPost(postToStart)
@@ -32,11 +31,9 @@ async function infiniteScroll() {
     }
 
 
-    document.addEventListener('scroll', function(e) {
+    document.addEventListener('scroll', function infinite(e) {
         let documentHeight = document.body.scrollHeight;
         let currentScroll = window.scrollY + window.innerHeight;
-        console.log(currentScroll);
-        console.log(documentHeight);
         if(currentScroll == documentHeight) {
             showPost(postToStart)
             postToStart--
@@ -44,7 +41,7 @@ async function infiniteScroll() {
 
         if (postToStart === 0) {
             console.log("No more posts!");
-            document.removeEventListener('scroll');
+            document.removeEventListener('scroll', infinite);
         }
     })
 
