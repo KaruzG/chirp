@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Allow the form to submit after validating the username
             form.submit();
+
+            window.location.href = "./login.html";
         }
     });
 });
