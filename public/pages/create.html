@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chirp Register</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/login.css">
-    
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+
+    <script defer src="/public/js/signup.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
                 <h2>Welcome to CHIRP!</h2>
             </div>
             <div class="container">
-                <form class="form" action="../../app/register.php" method="POST">
+                <form class="form" action="/app/register.php" method="POST">
                     <input id="email" type="email" name="email" placeholder="Enter your email">
                     <input id="email2" type="email" placeholder="Repeat your email">
                     <input id="password" type="password" name="password" placeholder="Create a password">
@@ -28,14 +29,13 @@
                 </form>
                 <hr>
                 <div class="create">
-                    <p>Already have an account? <a href="./login.html">Log in</a></p>
+                    <p>Already have an account? <a href="/public/pages/login.html">Log in</a></p>
                 </div>
             </div>
 
         </div>
     </div>
     </main>
-    <script src="../js/signup.js"></script>
 </body>
 
 </html>

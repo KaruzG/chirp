@@ -34,7 +34,7 @@ class User{
     }
 
     public function validatePassword($password, $userEmail) {
-        $userInfo = $this->read($userEmail);
+        $userInfo = $this->read("email = $userEmail");
 
         if(password_verify($password, $userInfo['password_hash'])) {
             return true;
