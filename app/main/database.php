@@ -1,6 +1,6 @@
 <?php
 // This class will handle connections to the DB and basic CRUD actions
-include_once "../config.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
 
 class Database {
     // DB CONNECTOR (Returns PDO connection object)
