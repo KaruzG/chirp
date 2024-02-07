@@ -2,7 +2,7 @@
 class User{
     function __construct() {
         include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-        include_once ROOT_DIR . "/app/main/database.php";
+        include_once $_SERVER['DOCUMENT_ROOT']."/app/main/database.php";
 
         $this->db = new Database();
     }
