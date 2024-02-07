@@ -1,5 +1,5 @@
 <?php
-include_once "./user.php";
+include_once "./tableClasses/user.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get data from the form
