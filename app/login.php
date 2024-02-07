@@ -1,5 +1,5 @@
 <?php
-include_once "./tableClasses/user.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/user.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
