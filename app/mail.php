@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require $_SERVER['DOCUMENT_ROOT'].'/app/lib/PHPMailer/src/Exception.php';
-require $_SERVER['DOCUMENT_ROOT'].'/app/lib/PHPMailer/src/PHPMailer.php';
-require $_SERVER['DOCUMENT_ROOT'].'/app/lib/PHPMailer/src/SMTP.php';
+require $_SERVER['DOCUMENT_ROOT'].'/vendor/phpmailer/phpmailer/src/Exception.php';
+require $_SERVER['DOCUMENT_ROOT'].'/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require $_SERVER['DOCUMENT_ROOT'].'/vendor/phpmailer/phpmailer/src/SMTP.php';
 
 include_once $_SERVER['DOCUMENT_ROOT'].'/config.php';
 
