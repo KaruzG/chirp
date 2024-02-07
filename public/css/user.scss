@@ -1,5 +1,11 @@
 @use 'mixins';
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section#userInfo {
     margin-top: 1em;
     margin-bottom: 1em;

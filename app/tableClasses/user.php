@@ -1,38 +1,23 @@
 <?php
 class User{
     function __construct() {
-        include_once "../config.php";
-        include_once "./database.php";
+        include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
+        include_once ROOT_DIR . "/app/main/database.php";
 
         $this->db = new Database();
     }
 
     public function create($name, $email, $password) {
-        if ($this->read($email) != false) {
+        if($this->read($email) != false) {
             return false;
         }
-    
-        $password = password_hash($password, PASSWORD_DEFAULT);
-    
-        // Use try-catch for better error handling
-        try {
-            // Enclose values in single quotes
-            $result = $this->db->createRecord("users", "'$name', '$email', '$password'");
-            if (!$result) {
-                throw new Exception("Failed to create user.");
-            }
-        } catch (Exception $e) {
-            error_log("User creation failed: " . $e->getMessage());
-            return false;
-        }
-    
-        return true;
-    }
-    
-    
 
-    public function read($email) {
-        $userInfo = $this->db->readRecords("users", "email = '$email'");
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $this->db->createRecord("users", "'$name', '$email', '$password'");
+    }
+
+    public function read($condition) {
+        $userInfo = $this->db->readRecords("users", $condition);
 
         if ($userInfo == null) {
             return false;

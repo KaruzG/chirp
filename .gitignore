@@ -1,2 +1,4 @@
 .php_tmp
 test.php
+
+*.css.map

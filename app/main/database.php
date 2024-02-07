@@ -34,6 +34,13 @@ class Database {
             case 'users':
                 $stm = "INSERT INTO $tableName (username, email, password_hash) VALUES ($data)";
                 break;
+
+            case 'tweets':
+                $user = $data[0];
+                $body = $data[1];
+                $stm = "INSERT INTO $tableName(user_id, content) VALUES ($user, '$body')";
+                break;
+
             default:
                 throw new Exception("Table ($tableName) not found in database.");
         }
@@ -85,6 +92,18 @@ class Database {
 
         $this->closeDb($conn);
         return true;
+    }
+
+    // MISC
+
+    public function latestId($tableName, $col) {
+        $conn = $this->openDb();
+        $stm = $conn->prepare("SELECT MAX($col) FROM $tableName");
+        $stm->setFetchMode(PDO::FETCH_ASSOC);
+        $stm->execute();
+
+        $this->closeDb($conn);
+        return $stm->fetch();
     }
 }
 ?>

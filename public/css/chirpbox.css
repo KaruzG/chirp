@@ -8,6 +8,9 @@
   padding: 10px;
   border-radius: 17px;
 }
+.chirp-big .content {
+  min-height: 2em;
+}
 
 .post-heading {
   display: flex;
@@ -52,7 +55,6 @@
   position: absolute;
   left: 0;
   top: 80%;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   background-color: #ccfff9;
   border-radius: 15px;

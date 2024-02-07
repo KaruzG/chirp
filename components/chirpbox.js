@@ -3,14 +3,37 @@ class Chirp extends HTMLElement {
         super();
     }
 
-    connectedCallback() {
-        this.render();
-        this.setupDropdown();
-        //console.log("Component Chirp Loaded Correctly");
+    async connectedCallback() {
+        if(!await this.render()) {
+            return false
+        }
+    }
+
+    async fetchInfo() {
+        let chirpId = this.attributes.chirpID.value;
+
+        const response = await fetch("/app/chirpInfo.php?chirpId=" + chirpId);
+
+        try {
+
+            if (!response.ok) {
+                throw new Error("Error fetching chirp data");
+            }
+
+            return response.json();
+        } catch (e) {
+            return false
+        }
     }
 
     //Create elements
-    render() {
+    async render() {
+        const chirpData = await this.fetchInfo();
+
+        if (!chirpData) {
+            return
+        }
+
         let outerContainer = document.createElement("div");
         outerContainer.classList.add("chirp-big");
 
@@ -23,13 +46,13 @@ class Chirp extends HTMLElement {
         let userImage = document.createElement("a");
         userImage.href = "";
         let userImageSrc = document.createElement("img");
-        userImageSrc.src = "../img/profile.png";
+        userImageSrc.src = "/public/img/profile.png";
         userImageSrc.alt = "pfp";
         userImage.appendChild(userImageSrc);
 
         let username = document.createElement("span");
         username.classList.add("username");
-        username.innerText = "@username_123";
+        username.innerText = "@" + chirpData.username;
 
         user.appendChild(userImage);
         user.appendChild(username);
@@ -39,7 +62,7 @@ class Chirp extends HTMLElement {
         actions.classList.add("actions");
 
         let dotsImage = document.createElement("img");
-        dotsImage.src = "../img/dots.png";
+        dotsImage.src = "/public/img/dots.png";
         dotsImage.height = "15";
         dotsImage.alt = "dots";
         dotsImage.id = "dots";
@@ -56,10 +79,7 @@ class Chirp extends HTMLElement {
         textContainer.classList.add("text-container");
 
         let text = document.createElement("p");
-        text.innerText = "aaaaaaaaa aaaaaa aaaaaaaaaa aaaaaaaaaaaaaaaaaaa " +
-            "aaaaaaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa " +
-            "aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa";
-
+        text.innerText = chirpData.content;
         textContainer.appendChild(text);
         content.appendChild(textContainer);
 
@@ -70,7 +90,7 @@ class Chirp extends HTMLElement {
         like.href = "";
         like.id = "like";
         let likeImage = document.createElement("img");
-        likeImage.src = "../img/heart.png";
+        likeImage.src = "/public/img/heart.png";
         likeImage.alt = "icon2";
         like.appendChild(likeImage);
 
@@ -78,7 +98,7 @@ class Chirp extends HTMLElement {
         comment.href = "";
         comment.id = "comment";
         let commentImage = document.createElement("img");
-        commentImage.src = "../img/chat_2.png";
+        commentImage.src = "/public/img/chat_2.png";
         commentImage.alt = "icon3";
         comment.appendChild(commentImage);
 
@@ -107,6 +127,8 @@ class Chirp extends HTMLElement {
         dropdown.appendChild(reportChirp);
         dropdown.appendChild(shareChirp);
         actions.appendChild(dropdown);
+
+        this.setupDropdown()
     }
 
     //Dropdown functionality
