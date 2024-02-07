@@ -7,6 +7,7 @@ class Chirp{
         $this->db = new Database();
     }
 
+    // CRUD
     public function uploadChirp($chirpOwner, $body) {
         $data[0] = $chirpOwner;
         $data[1] = $body;
@@ -18,8 +19,14 @@ class Chirp{
         return $this->db->readRecords("tweets", "tweet_id = '$id'");
     }
 
+
+    // MISC
     public function renderChirp($id) { // Not tested
         echo "<chirp-box chirpID=$id></chirp-box>";
+    }
+
+    public function lastChirp() {
+        return $this->db->latestId("tweets", "tweet_id");
     }
 }
 ?>

@@ -4,8 +4,9 @@ class Chirp extends HTMLElement {
     }
 
     async connectedCallback() {
-        await this.render();
-        this.setupDropdown();
+        if(!await this.render()) {
+            return false
+        }
     }
 
     async fetchInfo() {
@@ -13,16 +14,25 @@ class Chirp extends HTMLElement {
 
         const response = await fetch("/app/chirpInfo.php?chirpId=" + chirpId);
 
-        if (!response.ok) {
-            throw new Error("Error fetching chirp data");
-        }
+        try {
 
-        return await response.json();
+            if (!response.ok) {
+                throw new Error("Error fetching chirp data");
+            }
+
+            return response.json();
+        } catch (e) {
+            return false
+        }
     }
 
     //Create elements
     async render() {
         const chirpData = await this.fetchInfo();
+
+        if (!chirpData) {
+            return
+        }
 
         let outerContainer = document.createElement("div");
         outerContainer.classList.add("chirp-big");
@@ -117,6 +127,8 @@ class Chirp extends HTMLElement {
         dropdown.appendChild(reportChirp);
         dropdown.appendChild(shareChirp);
         actions.appendChild(dropdown);
+
+        this.setupDropdown()
     }
 
     //Dropdown functionality

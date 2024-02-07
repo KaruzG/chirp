@@ -92,5 +92,17 @@ class Database {
         $this->closeDb($conn);
         return true;
     }
+
+    // MISC
+
+    public function latestId($tableName, $col) {
+        $conn = $this->openDb();
+        $stm = $conn->prepare("SELECT MAX($col) FROM $tableName");
+        $stm->setFetchMode(PDO::FETCH_ASSOC);
+        $stm->execute();
+
+        $this->closeDb($conn);
+        return $stm->fetch();
+    }
 }
 ?>
