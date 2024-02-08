@@ -65,8 +65,10 @@
                 background-color: #1c585480;
                 border: none;
                 border-radius: 25px;
+                transition: 0.2s;
 
                 &:hover {
+                    transition: 0.2s;
                     background-color: #0b222080;
                     cursor: pointer;
                 }
