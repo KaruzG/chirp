@@ -61,4 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 2000);
         }
     });
+
+    form.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+        }
+    });
 });

@@ -67,7 +67,8 @@ class Database {
             return $stm->fetchAll();
         }
 
-        $stm = $conn->prepare("SELECT * FROM $tableName WHERE $condition");
+        $stm = $conn->prepare("SELECT * FROM $tableName WHERE email = :email");
+        $stm->bindParam(':email', $condition);
         $stm->setFetchMode(PDO::FETCH_ASSOC);
         $stm->execute();
 
