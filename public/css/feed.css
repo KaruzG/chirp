@@ -15,7 +15,7 @@ nav {
   border-radius: 25px;
   margin-top: 80px;
   display: flex;
-  background-color: var(--menuBg);
+  background-color: var(--mainGreen);
   align-items: center;
   justify-content: center;
 }
@@ -43,7 +43,7 @@ nav ul li a {
   font-weight: bold;
   text-decoration: none;
   padding: 10px;
-  color: var(--black);
+  color: var(--white);
   font-family: var(--regularText);
 }
 nav ul li a img {
