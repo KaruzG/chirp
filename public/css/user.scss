@@ -1,13 +1,15 @@
 @use 'mixins';
 
 body {
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 section#userInfo {
-    margin-top: 1em;
+    margin-top: 70px;
     margin-bottom: 1em;
 
     display: flex;
@@ -94,11 +96,11 @@ section#userInfo {
 }
 
 main {
+    width: 100vw;
     display: flex;
     flex-direction: column;
 
     h2 {
-        width: 100vw;
         text-align: left;
         margin-left: 1.5em;
     }
