@@ -7,14 +7,20 @@ body {
 
 nav {
     z-index: 0;
-    position: 0;
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
+    top: 20vh;
+    @media only screen and (max-width: 1150px) {
+        left: 0.5em;
+    }
+
+    left: 5em;
+
+    height: 50vh;
     width: max-content;
     padding: 3em;
-    
+    border-radius: 25px;
+    margin-top: 80px;
+
     display: flex;
     background-color: var(--menuBg);
     align-items: center;
@@ -22,8 +28,6 @@ nav {
 
     ul {
         position: relative;
-        top: -10%;
-        left: -5%;
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -31,23 +35,27 @@ nav {
         text-align: left;
 
         li {
-            margin: 10px;
+            margin: 0.5em;
 
             a {
+                display: flex;
+                align-items: center;
+                font-size: larger;
+                flex-direction: row;
+                font-weight: bold;
                 text-decoration: none;
                 padding: 10px;
                 color: var(--black);
                 font-family: var(--regularText);
 
                 img {
-                    position: relative;
-                    top: 8px;
-                    right: 5px;
-                    margin: 5px;
+                    width: 20px;
+                    margin-right: 20px;
                 }
 
                 &:hover {
                     font-weight: bolder;
+                    text-decoration: underline;
                 }
             }
         }
@@ -84,7 +92,7 @@ main {
     background-color: var(--pageBg);
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1040px) {
     #headerDropdownOuter {
         z-index: 2;
     }
@@ -100,7 +108,7 @@ main {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 600px) and (max-width: 1040px) {
     #headerDropdownOuter {
         z-index: 2;
     }
