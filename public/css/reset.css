@@ -6,6 +6,6 @@
 
     list-style-type: none;
     text-decoration: none;
-
+    outline: none;
     overflow: hidden;
 }
