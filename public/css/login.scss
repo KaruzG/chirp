@@ -11,9 +11,6 @@
     font-weight: 500;
 }
 
-// $color: --details;
-$hr: var(--details);
-
 main{
     align-content: center;
     align-items: center;
@@ -77,6 +74,12 @@ main{
 
 hr{
     border-color: var(--details);
+}
+
+.error{
+    @include text;
+    color: red;
+    font-size: 14px;
 }
 
 .create{

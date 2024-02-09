@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const email2 = document.getElementById('email2').value;
 
             if (email.trim() === '' || email2.trim() === '' || email !== email2 || !/\S+@\S+\.\S+/.test(email)) {
-                alert('Please enter valid and matching email addresses.');
+                document.getElementById('email').style.borderColor = 'red';
+                document.getElementById('email2').style.borderColor = 'red';
+                document.getElementById('email').insertAdjacentHTML('afterend', '<div class="error">Please enter valid and matching email addresses.</div>');
                 return;
             }
 
@@ -21,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const password2 = document.getElementById('password2').value;
 
             if (password.trim() === '' || password2.trim() === '' || password !== password2 || /\s/.test(password)) {
-                alert('Please enter valid and matching passwords.');
+                document.getElementById('password').style.borderColor = 'red';
+                document.getElementById('password2').style.borderColor = 'red';
+                document.getElementById('password').insertAdjacentHTML('afterend', '<div class="error">Please enter valid and matching passwords</div>');
                 return;
             }
 
@@ -49,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const username = document.getElementById('username').value;
 
             if (username.trim() === '') {
-                alert('Please enter a valid username.');
+                document.getElementById('username').style.borderColor = 'red';
+                document.getElementById('username').insertAdjacentHTML('afterend', '<div class="error">Please enter a valid username.</div>');
                 return;
             }
 

@@ -65,6 +65,13 @@ hr {
   border-color: var(--details);
 }
 
+.error {
+  font-family: "Source Sans 3";
+  font-weight: 500;
+  color: red;
+  font-size: 14px;
+}
+
 .create {
   margin: 15px;
   text-align: center;
