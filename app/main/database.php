@@ -65,16 +65,12 @@ class Database {
 
             $this->closeDb($conn);
             return $stm->fetchAll();
+        } else {
+            $stm = $conn->prepare("SELECT * FROM $tableName WHERE $condition");
+            $stm->execute();
+            $this->closeDb($conn);
+            return $stm->fetch();
         }
-
-        $stm = $conn->prepare("SELECT * FROM $tableName WHERE email = :email");
-        $stm->bindParam(':email', $condition);
-        $stm->setFetchMode(PDO::FETCH_ASSOC);
-        $stm->execute();
-
-        return $stm->fetch();
-
-        $this->closeDb($conn);
     }
 
     public function updateRecord($tableName, $data, $condition) {
