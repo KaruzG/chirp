@@ -12,7 +12,7 @@
 
         // USERNAME and PASSWORD
         define('USERNAME', "root");
-        define('PASSWORD', "password");
+        define('PASSWORD', "");
 
 
 
