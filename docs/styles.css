@@ -8,12 +8,22 @@
     padding: 0;
 }
 
+a {
+    color: #0a6860;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 body {
-    background-color: #08887d;
+    display: flex;
+    justify-content: center;
+    background-color: #a2d1cd;
     padding: 3em;
 }
 
 main {
+    width: 100%;
+    max-width: 70vw;
     padding: 1em;
     border-radius: 20px;
     box-shadow: 1px 1px 3px black;
@@ -22,4 +32,14 @@ main {
 
 ul {
     margin-left: 2em;
+}
+
+h2 {
+    margin-top: 1em;
+}
+
+p.underTitle {
+    color: gray;
+    font-weight: bold;
+    font-style: italic;
 }
