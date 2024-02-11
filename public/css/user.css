@@ -40,7 +40,7 @@ section#userInfo div div#userInfo {
 }
 section#userInfo div div#userInfo div:nth-child(1) {
   width: 100%;
-  gap: 2em;
+  gap: 1.5em;
   align-items: center;
 }
 section#userInfo div div#userInfo div:nth-child(1) span {
@@ -58,13 +58,16 @@ section#userInfo div div#userInfo div:nth-child(1) button {
   background-color: var(--mainGreen);
   font-weight: bold;
   color: var(--white);
-  border-radius: 20px;
+  border-radius: 15px;
   border: 2px solid var(--chirpLightGreen2);
 }
+section#userInfo div div#userInfo div:nth-child(1) button:hover {
+  background-color: 2px solid var(--mainGreen);
+}
 section#userInfo div div#userInfo div:nth-child(1) img {
-  max-width: 25px;
-  max-height: 25px;
-  filter: invert(33%) sepia(30%) saturate(595%) hue-rotate(148deg) brightness(97%) contrast(94%);
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 1em;
 }
 section#userInfo div div#userInfo div:nth-child(2) {
   justify-content: flex-start;

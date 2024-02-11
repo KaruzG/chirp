@@ -45,7 +45,7 @@ section#userInfo {
 
             div:nth-child(1) {
                 width: 100%;
-                gap: 2em;
+                gap: 1.5em;
                 align-items: center;
                 span {
                     @include mixins.userName;
@@ -60,10 +60,9 @@ section#userInfo {
                 }
 
                 img {
-                    max-width: 25px;
-                    max-height: 25px;
-
-                    filter: invert(33%) sepia(30%) saturate(595%) hue-rotate(148deg) brightness(97%) contrast(94%);
+                    max-width: 20px;
+                    max-height: 20px;
+                    margin-right: 1em;
                 }
             }
 

@@ -10,8 +10,12 @@
     background-color: var(--mainGreen);
     font-weight: bold;
     color: var(--white);
-    border-radius: 20px;
+    border-radius: 15px;
     border: 2px solid var(--chirpLightGreen2);
+
+    &:hover {
+        background-color: 2px solid var(--mainGreen);
+    }
 }
 
 @mixin glassmorphism() {
