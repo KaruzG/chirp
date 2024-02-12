@@ -28,8 +28,17 @@ The project structure follows the Model-View-Controller (MVC) design pattern:
 |   |-- svg/
 |-- index.php
 |-- config.php
+|-- composer.json
 ```
 
 ## Configuration
-1. Create a Database: Set up a MySQL database and update the information in config.php.
-2. Install Dependencies: Use `Composer.sh` to install project dependencies.
+1. Create a Database: Set up a MySQL database **tested with MySQL**
+2. Update the information in /config.php.
+
+## Dependencies
+### PHP:
+To intall PHP depencencies use `'composer install'`
+- PHPMailer
+
+### JS:
+None

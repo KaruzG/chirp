@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chirp Login</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/login.css">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
                 <h2>Welcome to CHIRP!</h2>
             </div>
             <div class="container">
-                <form class="form" action="#" method="POST">
-                    <input id="username" type="text" placeholder="Enter your username"></input>
-                    <input id="password" type="text" placeholder="Enter your password"></input>
+                <form class="form" action="/app/login.php" method="POST">
+                    <input id="email" type="email" name="email" placeholder="Enter your email"></input>
+                    <input id="password" type="password" name="password" placeholder="Enter your password"></input>
                     <input type="submit" id="enviar" value="Log in"></input>
                 </form>
                 <hr>
                 <div class="create">
-                    <p>You don't have an account? <a href="./create.html">Sign up now!</a></p>
+                    <p>You don't have an account? <a href="/public/pages/create.html">Sign up now!</a></p>
                 </div>
             </div>
 
