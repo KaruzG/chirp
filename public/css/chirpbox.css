@@ -8,6 +8,9 @@
   padding: 10px;
   border-radius: 17px;
 }
+.chirp-big .content {
+  min-height: 2em;
+}
 
 .post-heading {
   display: flex;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirpbox test</title>
+    <title>Feed</title>
 
     <!--Requirements-->
     <link rel="stylesheet" href="/public/css/reset.css">
@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="/public/css/postChirp.css">
     <link rel="stylesheet" href="/public/css/index.css">
 
-
     <script defer src="/components/chirpbox.js"></script>
     <script defer src="/components/chirpHeader.js"></script>
+    <script defer src="/public/js/feedInfiniteChirps.js"></script>
+    <script defer src="/public/js/postChirp.js"></script>
 
 </head>
 
@@ -26,10 +27,10 @@
         <!-- Left side of the screen -->
         <nav>
             <ul>
-                <li><a href=""><img src="../img/Home.png" alt="">Home</a></li>
-                <li><a href=""><img src="../img/Bookmark.png" alt="">Saved</a></li>
-                <li><a href=""><img src="../img/svg-g.png" alt="">Profile</a></li>
-                <li><a href=""><img src="../img/Settings.png" alt="">Settings</a></li>
+                <li><a href=""><img src="/public/img/Home.png" alt="">Home</a></li>
+                <li><a href=""><img src="/public/img/Bookmark.png" alt="">Saved</a></li>
+                <li><a href=""><img src="/public/img/svg-g.png" alt="">Profile</a></li>
+                <li><a href=""><img src="/public/img/Settings.png" alt="">Settings</a></li>
             </ul>
         </nav>
 
@@ -38,16 +39,22 @@
             <div id="postChirp">
                 <div>
                     <img src="/public/img/defaultProfilePicture.jpg" alt="">
-                    <h2>@USERNAME</h2>
+                    <h2 class="usernamePlaceholder">@USERNAME</h2>
                 </div>
                 <div>
-                    <textarea name="" id=""></textarea>
+                    <textarea name="" id="postChirpTextarea"></textarea>
                     <div>
                         <img src="/public/svg/img.svg" alt="">
-                        <button>POST</button>
+                        <button id="postChirpButton">POST</button>
                     </div>
                 </div>
             </div>
+            
+            <div id="post-box">
+
+            </div>
+            <div id="loader">
+                <h1>...</h1>
         </main>
 
         <!-- Right side of the screen -->

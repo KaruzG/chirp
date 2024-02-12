@@ -11,9 +11,6 @@
     font-weight: 500;
 }
 
-// $color: --details;
-$hr: var(--details);
-
 main{
     align-content: center;
     align-items: center;
@@ -79,8 +76,25 @@ hr{
     border-color: var(--details);
 }
 
+.error{
+    @include text;
+    color: red;
+    font-size: 14px;
+}
+
 .create{
     margin: 15px;
     text-align: center;
     @include text;
+}
+
+input{
+    margin: 10px;
+    padding: 10px;
+    min-width: 230px;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: var(--chirpBg);
+    border: 1px solid var(--details);
+
 }

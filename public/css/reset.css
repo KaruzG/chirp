@@ -1,4 +1,4 @@
-* {
+s* {
     box-sizing: border-box;
 
     margin: 0;
@@ -7,5 +7,4 @@
     list-style-type: none;
     text-decoration: none;
     outline: none;
-    overflow: hidden;
 }

@@ -71,6 +71,7 @@ class ChirpHeader extends HTMLElement {
         img.src = "/public/img/defaultProfilePicture.jpg"
 
         let userName = document.createElement("a")
+        userName.classList.add("usernamePlaceholder")
         userName.innerText = "Username!"
 
         userDiv.append(img)
