@@ -47,7 +47,7 @@ chirp-header div#headerDropdownOuter {
   box-shadow: 0 8px 32px 0 rgba(5, 7, 24, 0.242);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
+  border-radius: 0 10px 0 10px;
 }
 chirp-header div#headerDropdownOuter hr {
   width: 95%;
@@ -61,6 +61,10 @@ chirp-header div#headerDropdownOuter ul {
   padding: 1em;
   gap: 0.5em;
   font-weight: bold;
+}
+chirp-header div#headerDropdownOuter ul li {
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 chirp-header div#headerDropdownOuter ul div.headerDropdown-user {
   display: flex;
@@ -77,8 +81,9 @@ chirp-header div#headerDropdownOuter ul div.headerDropdown-user img {
   border: 2px solid var(--chirpLightGreen2);
 }
 chirp-header div#headerDropdownOuter ul div.headerDropdown-user a {
-  font-size: large;
-  color: var(--black);
+  font-size: larger;
+  color: var(--white);
+  text-shadow: 1px 1px 2px black;
   font-style: italic;
 }
 chirp-header div#desktopUser {
@@ -93,12 +98,12 @@ chirp-header div#desktopUser {
   height: 56px;
 }
 chirp-header div#desktopUser input {
-  border: 0px solid var(--chirpLightGreen2);
   height: 60%;
+  max-width: 150px;
+  border: 0px solid var(--chirpLightGreen2);
   border-radius: 20px;
   background-color: var(--darkGreen);
   padding: 10px;
-  max-width: 150px;
   font-size: large;
   color: rgb(211, 211, 211);
 }

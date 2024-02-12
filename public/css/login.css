@@ -1,8 +1,22 @@
 @import 'vars.css';
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
+body {
+  background-color: var(--pageBg);
+  font-family: "Source Sans 3";
+}
+
 main {
   align-content: center;
   align-items: center;
+}
+
+.chirpLogo {
+  font-size: x-large;
+  text-shadow: var(--textShadow);
+  font-family: "Sonsie One", system-ui;
+  color: var(--white);
+  overflow: visible;
 }
 
 .page {
@@ -27,11 +41,13 @@ main {
   max-width: 600px;
   padding: 80px;
   border-radius: 15px;
-  background-color: var(--chirpBg);
+  background: var(--gradien1);
   box-shadow: var(--textShadow);
 }
 
 .heading {
+  color: var(--white);
+  text-shadow: 1px 1px 2px black;
   text-align: center;
   font-family: Syne;
   font-weight: 600;
@@ -44,21 +60,41 @@ main {
   align-content: space-between;
   align-items: center;
 }
+.form label {
+  font-size: large;
+  width: 100%;
+  color: var(--white);
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.473);
+}
 .form input {
-  margin: 10px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1em;
+  border-radius: 10px !important;
+  border: 0px solid var(--chirpLightGreen2);
+  border-radius: 20px;
+  background-color: var(--darkGreen);
   padding: 10px;
-  min-width: 230px;
-  max-width: 400px;
-  border-radius: 10px;
-  background-color: var(--chirpBg);
-  border: 1px solid var(--details);
+  font-size: large;
+  color: rgb(211, 211, 211);
 }
 .form #enviar {
-  background-color: rgba(49, 239, 184, 0.2);
+  padding: 0.5em 1em;
+  color: var(--white);
+  font-weight: bold;
+  font-size: x-large;
+  letter-spacing: 1px;
+  background-color: rgba(28, 88, 84, 0.5019607843);
+  border: none;
+  border-radius: 25px;
+  transition: 0.2s;
+  font-style: italic;
 }
 .form #enviar:hover {
+  transition: 0.2s;
+  background-color: rgba(11, 34, 32, 0.5019607843);
   cursor: pointer;
-  background-color: rgba(49, 239, 184, 0.7);
 }
 
 hr {

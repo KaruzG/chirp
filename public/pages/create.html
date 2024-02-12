@@ -12,18 +12,21 @@
 </head>
 
 <body>
-    <header class="header"></header>
     <main>
         <div class="page">
         <div class="outer-container">
             <div class="heading">
-                <h2>Welcome to CHIRP!</h2>
+                <h2>Welcome to <span class="chirpLogo">CHIRP</span></h2>
             </div>
             <div class="container">
                 <form class="form" action="/app/register.php" method="POST">
+                    <label for="email">Email</label>
                     <input id="email" type="email" name="email" placeholder="Enter your email">
+                    <label for="email2">Repeat email</label>
                     <input id="email2" type="email" placeholder="Repeat your email">
+                    <label for="password">Password</label>
                     <input id="password" type="password" name="password" placeholder="Create a password">
+                    <label for="password2">Repeat password</label>
                     <input id="password2" type="password" placeholder="Repeat the password">
                     <input type="button" id="enviar" value="Sign Up">
                 </form>

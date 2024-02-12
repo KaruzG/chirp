@@ -1,6 +1,42 @@
-@mixin userName() {
+@mixin chirpLogo() {
+    font-size: x-large;
+    text-shadow: var(--textShadow);
+    font-family: 'Sonsie One', system-ui;
+    color: var(--white);
+    overflow: visible;
+}
+
+@mixin button() {
+    padding: 0.5em 1em;
+    color: var(--white);
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 1px;
+    background-color: #1c585480;
+    border: none;
+    border-radius: 25px;
+    transition: 0.2s;
+
+    &:hover {
+        transition: 0.2s;
+        background-color: #0b222080;
+        cursor: pointer;
+    }
+}
+
+@mixin input() {
+    border: 0px solid var(--chirpLightGreen2);
+    border-radius: 20px;
+    background-color: var(--darkGreen);
+    padding: 10px;
     font-size: large;
-    color: var(--black);
+    color: rgb(211, 211, 211);
+}
+
+@mixin userName() {
+    font-size: larger;
+    color: var(--white);
+    text-shadow: 1px 1px 2px black;
     font-style: italic;
 }
 
@@ -23,5 +59,5 @@
     box-shadow: 0 8px 32px 0 rgba(5, 7, 24, 0.242);
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
-    border-radius: 10px;
+    border-radius: 0 10px 0 10px;
 }

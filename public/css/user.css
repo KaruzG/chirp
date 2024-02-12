@@ -44,8 +44,9 @@ section#userInfo div div#userInfo div:nth-child(1) {
   align-items: center;
 }
 section#userInfo div div#userInfo div:nth-child(1) span {
-  font-size: large;
-  color: var(--black);
+  font-size: larger;
+  color: var(--white);
+  text-shadow: 1px 1px 2px black;
   font-style: italic;
   font-weight: bold;
   max-width: 320px;

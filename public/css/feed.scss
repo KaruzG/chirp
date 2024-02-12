@@ -9,11 +9,10 @@ nav {
     z-index: 0;
     position: fixed;
     top: 20vh;
-    @media only screen and (max-width: 1150px) {
+    @media only screen and (max-width: 1300px) {
         left: 0.5em;
     }
-
-    left: 5em;
+    left: 10vw;
 
     height: 50vh;
     width: max-content;
@@ -81,6 +80,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    max-width: 95vw;
+
     width: 500px;
 
     .chirp-big {
