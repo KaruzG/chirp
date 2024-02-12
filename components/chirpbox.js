@@ -48,6 +48,7 @@ class Chirp extends HTMLElement {
         let userImageSrc = document.createElement("img");
         userImageSrc.src = "/public/img/profile.png";
         userImageSrc.alt = "pfp";
+        userImageSrc.classList.add("chirpbox-pfp");
         userImage.appendChild(userImageSrc);
 
         let username = document.createElement("span");

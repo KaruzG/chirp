@@ -1,11 +1,14 @@
 body {
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--pageBg);
 }
 
 section#userInfo {
-  margin-top: 1em;
+  margin-top: 70px;
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
@@ -37,12 +40,13 @@ section#userInfo div div#userInfo {
 }
 section#userInfo div div#userInfo div:nth-child(1) {
   width: 100%;
-  gap: 2em;
+  gap: 1.5em;
   align-items: center;
 }
 section#userInfo div div#userInfo div:nth-child(1) span {
-  font-size: large;
-  color: var(--black);
+  font-size: larger;
+  color: var(--white);
+  text-shadow: 1px 1px 2px black;
   font-style: italic;
   font-weight: bold;
   max-width: 320px;
@@ -55,13 +59,16 @@ section#userInfo div div#userInfo div:nth-child(1) button {
   background-color: var(--mainGreen);
   font-weight: bold;
   color: var(--white);
-  border-radius: 20px;
+  border-radius: 15px;
   border: 2px solid var(--chirpLightGreen2);
 }
+section#userInfo div div#userInfo div:nth-child(1) button:hover {
+  background-color: 2px solid var(--mainGreen);
+}
 section#userInfo div div#userInfo div:nth-child(1) img {
-  max-width: 25px;
-  max-height: 25px;
-  filter: invert(33%) sepia(30%) saturate(595%) hue-rotate(148deg) brightness(97%) contrast(94%);
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 1em;
 }
 section#userInfo div div#userInfo div:nth-child(2) {
   justify-content: flex-start;
@@ -89,11 +96,13 @@ section#userInfo div div#userInfo div:nth-child(2) table tr td {
 }
 
 main {
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
 main h2 {
-  width: 100vw;
+  color: var(--white);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.687);
   text-align: left;
   margin-left: 1.5em;
 }

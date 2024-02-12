@@ -3,7 +3,7 @@
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, rgba(53,164,158,1) 35%, rgba(94,216,205,1) 100%);
+    background: var(--gradien1);
     border-radius: 25px;
     padding: 1em;
 
@@ -57,19 +57,7 @@
             }
 
             button {
-                padding: 0.5em 1em;
-                color: var(--white);
-                font-weight: bold;
-                font-size: x-large;
-                letter-spacing: 1px;
-                background-color: #1c585480;
-                border: none;
-                border-radius: 25px;
-
-                &:hover {
-                    background-color: #0b222080;
-                    cursor: pointer;
-                }
+                @include mixins.button();
             }
         }
     }

@@ -1,5 +1,8 @@
+@use 'mixins';
 @import 'vars.css';
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+
 
 @mixin heading{
     font-family: Syne;
@@ -11,9 +14,18 @@
     font-weight: 500;
 }
 
+body {
+    background-color: var(--pageBg);
+    font-family: 'Source Sans 3';
+}
+
 main{
     align-content: center;
     align-items: center;
+}
+
+.chirpLogo {
+    @include mixins.chirpLogo();
 }
 
 .page {
@@ -38,11 +50,13 @@ main{
     max-width: 600px;
     padding: 80px;
     border-radius: 15px;
-    background-color: var(--chirpBg);
+    background: var(--gradien1);
     box-shadow: var(--textShadow);
   }
 
 .heading{
+    color: var(--white);
+    text-shadow: 1px 1px 2px black;
     text-align: center;
     @include heading;
 }
@@ -53,22 +67,26 @@ main{
     flex-direction: column;
     align-content: space-between;
     align-items: center;
-    input{
-        margin: 10px;
-        padding: 10px;
-        min-width: 230px;
-        max-width: 400px;
-        border-radius: 10px;
-        background-color: var(--chirpBg);
-        border: 1px solid var(--details);
+
+    label {
+        font-size: large;
+        width: 100%;
+        color: var(--white);
+        font-style: italic;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.473);
 
     }
+
+    input{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1em;
+        border-radius: 10px !important; 
+        @include mixins.input();
+    }
     #enviar{
-        background-color: transparentize($color: #31efb8, $amount: 0.8);
-        &:hover{
-            cursor: pointer;
-            background-color: transparentize($color: #31efb8, $amount: 0.3);
-        }
+        @include mixins.button();
+        font-style: italic;
     }
 }
 

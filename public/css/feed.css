@@ -6,23 +6,26 @@ body {
 
 nav {
   z-index: 0;
-  position: 0;
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: -moz-max-content;
+  top: 20vh;
+  left: 10vw;
+  height: 50vh;
   width: max-content;
   padding: 3em;
+  border-radius: 25px;
+  margin-top: 80px;
   display: flex;
-  background-color: var(--menuBg);
+  background-color: var(--mainGreen);
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 1300px) {
+  nav {
+    left: 0.5em;
+  }
+}
 nav ul {
   position: relative;
-  top: -10%;
-  left: -5%;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -30,29 +33,33 @@ nav ul {
   text-align: left;
 }
 nav ul li {
-  margin: 10px;
+  margin: 0.5em;
 }
 nav ul li a {
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  flex-direction: row;
+  font-weight: bold;
   text-decoration: none;
   padding: 10px;
-  color: var(--black);
+  color: var(--white);
   font-family: var(--regularText);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.568);
 }
 nav ul li a img {
-  position: relative;
-  top: 8px;
-  right: 5px;
-  margin: 5px;
+  width: 20px;
+  margin-right: 20px;
 }
 nav ul li a:hover {
   font-weight: bolder;
+  text-decoration: underline;
 }
 
 main {
   z-index: 1;
   display: flex;
   top: 56px;
-  height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
   padding: 1em;
@@ -66,6 +73,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-width: 95vw;
   width: 500px;
 }
 #post-box .chirp-big {
@@ -77,7 +85,7 @@ main {
   background-color: var(--pageBg);
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1040px) {
   #headerDropdownOuter {
     z-index: 2;
   }
@@ -90,7 +98,7 @@ main {
     /* Hide the aside section on mobile */
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 600px) and (max-width: 1040px) {
   #headerDropdownOuter {
     z-index: 2;
   }

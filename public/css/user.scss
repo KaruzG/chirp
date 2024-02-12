@@ -1,13 +1,16 @@
 @use 'mixins';
 
 body {
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--pageBg);
 }
 
 section#userInfo {
-    margin-top: 1em;
+    margin-top: 70px;
     margin-bottom: 1em;
 
     display: flex;
@@ -42,7 +45,7 @@ section#userInfo {
 
             div:nth-child(1) {
                 width: 100%;
-                gap: 2em;
+                gap: 1.5em;
                 align-items: center;
                 span {
                     @include mixins.userName;
@@ -57,10 +60,9 @@ section#userInfo {
                 }
 
                 img {
-                    max-width: 25px;
-                    max-height: 25px;
-
-                    filter: invert(33%) sepia(30%) saturate(595%) hue-rotate(148deg) brightness(97%) contrast(94%);
+                    max-width: 20px;
+                    max-height: 20px;
+                    margin-right: 1em;
                 }
             }
 
@@ -94,11 +96,13 @@ section#userInfo {
 }
 
 main {
+    width: 100vw;
     display: flex;
     flex-direction: column;
 
     h2 {
-        width: 100vw;
+        color: var(--white);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.687);
         text-align: left;
         margin-left: 1.5em;
     }
