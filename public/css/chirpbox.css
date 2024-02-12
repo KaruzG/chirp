@@ -52,6 +52,7 @@
   position: absolute;
   left: 0;
   top: 80%;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   background-color: #ccfff9;
   border-radius: 15px;
