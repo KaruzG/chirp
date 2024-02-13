@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPTIONS</title>
+  <link rel="stylesheet" href="/public/css/vars.css" />
+  <link rel="stylesheet" href="/public/css/index.css" />
+  <link rel="stylesheet" href="/public/css/reset.css" />
+  <link rel="stylesheet" href="/public/css/header.css" />
+  <link rel="stylesheet" href="/public/css/options.css">
+  <script defer src="/components/chirpHeader.js"></script>
+  <script defer src="/public/js/options.js"></script>
+</head>
+
+<body>
+  <chirp-header></chirp-header>
+  <nav class="menu">
+    <h1>OPTIONS</h1>
+    <ul>
+      <li><a href="#" onclick="showInfo('info-tu')">Tú y Chirp</a></li>
+      <li>
+        <a href="#" onclick="showInfo('info-privacidad')">Privacidad y seguridad</a>
+      </li>
+      <li><a href="#" onclick="showInfo('info-aspecto')">Aspecto</a></li>
+      <!--  <li><a href="#" onclick="showInfo('info-buscador')">Buscador</a></li> -->
+      <li><a href="#" onclick="showInfo('info-idiomas')">Idiomas</a></li>
+      <li><a href="#" onclick="showInfo('info-sistema')">Sistema</a></li>
+      <li>
+        <a href="#" onclick="showInfo('info-configuracion')">Restablecer configuración</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="info-tu" class="info-container">
+    <p>Information about You and Chirp:</p>
+  </div>
+  <div id="info-privacidad" class="info-container">
+    <div>
+      <p>Privacy and security information:</p>
+      <p>
+        <input type="checkbox" id="cbox1" value="first_checkbox" checked="checked">Account Public</input>
+      </p>
+      <p>
+        <input type="checkbox" id="cbox2" checked="checked" value="first_checkbox">Post Publics</input>
+      </p>
+      <div>
+        <p id="text">Change password:</p>
+        <a id="reset_btn" class="btn btn--reset" href="#">Change Password</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div id="info-aspecto" class="info-container">
+    <p>Appearance Information:</p>
+  </div>
+  <div id="info-idiomas" class="info-container">
+    <p>
+      Select your lenguage:
+      <select name="select">
+        <option value="value1">English</option>
+        <option value="value2" selected>Español</option>
+        <option value="value3">Français</option>
+      </select>
+    </p>
+  </div>
+  <div id="info-sistema" class="info-container">
+    <p>System Information:</p>
+  </div>
+  <div id="info-configuracion" class="info-container">
+    <p>
+      Information about Reset Settings:
+      <a id="reset_btn" class="btn btn--reset" href="#">Reset</a>
+    </p>
+  </div>
+</body>
+
+</html>
