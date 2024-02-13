@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -9,16 +10,9 @@ body {
   align-items: center;
 }
 
-header {
-  background-color: #08887d;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-nav {
+nav.menu {
   background-color: #c4fffb;
-  padding: 10px;
+  padding: 77px 10px 10px 10px;
   text-align: center;
 }
 
@@ -66,6 +60,11 @@ nav a {
   min-height: 100px;
   padding: 0.5rem;
   min-width: 450px;
+}
+
+.info-container--show p {
+  margin: 0; /* Elimina el margen predeterminado de los párrafos */
+  padding: 5px 0; /* Añade un poco de espacio entre los párrafos */
 }
 
 a {
