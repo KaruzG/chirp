@@ -1,8 +1,13 @@
 <?php
 // This class will handle connections to the DB and basic CRUD actions
-include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-
 class Database {
+    function __construct() {
+        include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
+        include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
+
+        $this->logger = new Logger();
+    }
+
     // DB CONNECTOR (Returns PDO connection object)
     private function openDb() { 
         try {
@@ -39,19 +44,18 @@ class Database {
                 $user = $data[0];
                 $body = $data[1];
                 $stm = "INSERT INTO $tableName(user_id, content) VALUES ($user, '$body')";
+                $this->logger->log("[INFO] - User: id$user posted a chirp");
                 break;
 
             default:
                 throw new Exception("Table ($tableName) not found in database.");
         }
     
-        if ($conn->query($stm) === false) {
-            echo "ERROR: CREATE failed." . $conn->error;
-            return false;
+        if ($conn->query($stm) == false) {
+            $this->logger->log("[ERROR] - CREATE failed: $conn->error");
         }
     
         $this->closeDb($conn);
-        return true;
     }
     
 
