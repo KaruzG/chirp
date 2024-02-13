@@ -1,22 +1,32 @@
 @import './vars.css';
 
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 nav {
-    z-index: 2;
-    position: sticky;
-    left: 0;
-    height: 100vh;
+    z-index: 0;
+    position: fixed;
+    top: 20vh;
+    @media only screen and (max-width: 1300px) {
+        left: 0.5em;
+    }
+    left: 10vw;
+
+    height: 50vh;
     width: max-content;
     padding: 3em;
-    
+    border-radius: 25px;
+    margin-top: 80px;
+
     display: flex;
-    background-color: var(--menuBg);
+    background-color: var(--mainGreen);
     align-items: center;
     justify-content: center;
 
     ul {
         position: relative;
-        top: -10%;
-        left: -5%;
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -24,23 +34,28 @@ nav {
         text-align: left;
 
         li {
-            margin: 10px;
+            margin: 0.5em;
 
             a {
+                display: flex;
+                align-items: center;
+                font-size: larger;
+                flex-direction: row;
+                font-weight: bold;
                 text-decoration: none;
                 padding: 10px;
-                color: var(--black);
+                color: var(--white);
                 font-family: var(--regularText);
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.568);
 
                 img {
-                    position: relative;
-                    top: 8px;
-                    right: 5px;
-                    margin: 5px;
+                    width: 20px;
+                    margin-right: 20px;
                 }
 
                 &:hover {
                     font-weight: bolder;
+                    text-decoration: underline;
                 }
             }
         }
@@ -48,21 +63,29 @@ nav {
 }
 
 main {
-    z-index: -1;
+    z-index: 1;
     display: flex;
-    position: absolute;
     top: 56px;
-    width: 100vw;
     height: fit-content;
     min-height: 100vh;
     padding: 1em;
+    padding-top: 80px;
 
     flex-direction: column;
     align-items: center;
     background-color: var(--pageBg);
+}
 
-    chirp-box {
-        margin-top: 15px;
+#post-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 95vw;
+
+    width: 500px;
+
+    .chirp-big {
+        margin-top: 1em;
     }
 }
 
@@ -71,7 +94,7 @@ main {
     background-color: var(--pageBg);
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1040px) {
     #headerDropdownOuter {
         z-index: 2;
     }
@@ -87,7 +110,7 @@ main {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 600px) and (max-width: 1040px) {
     #headerDropdownOuter {
         z-index: 2;
     }

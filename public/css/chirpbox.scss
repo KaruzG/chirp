@@ -21,9 +21,20 @@ $optionsFontColor: #636363;
     display: flex;
     flex-direction: column;
     background-color: $postBG;
-    padding: 10px;
-    border-radius: 17px;
+    padding: 1em;
+    border-radius: 25px;
 
+    .content {
+        margin-top: 0.5em;
+        margin-left: 1em;
+        min-height: 2em;
+    }
+}
+
+.chirpbox-pfp {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
 }
 
 .post-heading{
@@ -43,6 +54,7 @@ $optionsFontColor: #636363;
 }
 
 .text-container{
+    font-size: larger;
     display: block;
     width: auto;
     @include fontFamily;
@@ -53,10 +65,20 @@ $optionsFontColor: #636363;
     align-self: flex-end;
 }
 
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
 .username{
+    font-size: large;
+    color: #0d5952;
+    font-style: italic;
+    font-weight: bolder;
     position: relative;
     left: 10px;
-    bottom: 7px;
 }
 
 #dots{

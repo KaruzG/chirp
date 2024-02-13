@@ -2,11 +2,4 @@
 * {
   font-family: "Source Sans 3", sans-serif;
   color: var(--black);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--white);
 }/*# sourceMappingURL=index.css.map */

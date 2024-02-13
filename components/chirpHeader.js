@@ -37,8 +37,25 @@ class ChirpHeader extends HTMLElement {
         let dropdown = document.createElement("div")
         dropdown.id = "headerDropdownOuter"
 
-        outerContainer.appendChild(dropdown)
+        // Desktop 
+        let desktopDiv = document.createElement("div")
+        desktopDiv.id = "desktopUser"
 
+        let inputDesktop = document.createElement("input")
+        inputDesktop.type = "search"
+        desktopDiv.appendChild(inputDesktop)
+
+
+        let imgDesktop = document.createElement("img")
+        imgDesktop.src = "/public/img/defaultProfilePicture.jpg"
+        desktopDiv.appendChild(imgDesktop)
+
+        let userText = document.createElement("h3")
+        userText.innerText = "Username";
+        desktopDiv.appendChild(userText)
+
+        outerContainer.appendChild(desktopDiv)
+        outerContainer.appendChild(dropdown)
         this.appendChild(outerContainer)
     }
 
@@ -54,6 +71,7 @@ class ChirpHeader extends HTMLElement {
         img.src = "/public/img/defaultProfilePicture.jpg"
 
         let userName = document.createElement("a")
+        userName.classList.add("usernamePlaceholder")
         userName.innerText = "Username!"
 
         userDiv.append(img)

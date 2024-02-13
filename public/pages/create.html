@@ -4,31 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirp Login</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/signup.js"></script>
+    <title>Chirp Register</title>
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+
+    <script defer src="/public/js/signup.js"></script>
 </head>
 
 <body>
-    <header class="header"></header>
     <main>
         <div class="page">
         <div class="outer-container">
             <div class="heading">
-                <h2>Welcome to CHIRP!</h2>
+                <h2>Welcome to <span class="chirpLogo">CHIRP</span></h2>
             </div>
             <div class="container">
-                <form class="form" action="#" method="POST">
-                    <input id="email" type="email" placeholder="Enter your email"></input>
-                    <input id="email2" type="email" placeholder="Repeat your email"></input>
-                    <input id="password" type="password" placeholder="Create a password"></input>
-                    <input id="password2" type="password" placeholder="Repeat the password"></input>
-                    <input type="submit" id="enviar" value="Sign Up"></input>
+                <form class="form" action="/app/register.php" method="POST">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Enter your email">
+                    <label for="email2">Repeat email</label>
+                    <input id="email2" type="email" placeholder="Repeat your email">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Create a password">
+                    <label for="password2">Repeat password</label>
+                    <input id="password2" type="password" placeholder="Repeat the password">
+                    <input type="button" id="enviar" value="Sign Up">
                 </form>
                 <hr>
                 <div class="create">
-                    <p>Already have an account? <a href="./login.html">Log in</a></p>
+                    <p>Already have an account? <a href="/public/pages/login.html">Log in</a></p>
                 </div>
             </div>
 

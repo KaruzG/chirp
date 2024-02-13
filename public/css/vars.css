@@ -3,10 +3,11 @@
         /* WHITE */
         --white: #FAFAFA;
         --gray: #eff1f5;
-        --pageBg: #eaeaea;
+        --pageBg: #085750;
 
         /* GREEN */
         --mainGreen: #08887d;
+        --darkGreen: #0a6860;
         --chirpLightGreen2: #86cac3;
         --chirpLightGreen: #bbf0eb;
         --chirpBg: #e5fffc;
@@ -15,6 +16,9 @@
 
         /* BLACK */
         --black: rgb(45, 45, 45); /* Not that agresive black */
+
+    /* GRADIENS */
+        --gradien1: linear-gradient(180deg, rgba(53,164,158,1) 35%, rgba(94,216,205,1) 100%);
         
     /* SHADOWS */
         /* TEXT */
