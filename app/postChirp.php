@@ -1,24 +1,27 @@
-<?php 
-session_start();
-include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/chirp.php";
-include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/user.php";
+<?php
+    session_start();
+    include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/Chirp.php";
+    include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/user.php";
+    include_once $_SERVER['DOCUMENT_ROOT']."/app/main/logger.php";
 
+    $logger = new Logger();
+    $user = new User();
 
-$chirpBody = $_POST['postText'];
-$user = $_SESSION['logged_user'];
+    $userInfo = $user->readUserByEmail($_SESSION['logged_user']);
 
-// Validation
-if($user === null || $chirpBody === null) {
-    echo "error";
-    return false;
-}
+    $chirpBody = $_POST['postText'];
+    $user = $userInfo['user_id'];
 
-// Post
-$chirp = new Chirp();
-$chirp->uploadChirp($user, $chirpBody);
+    // Validation
+    if($user === null || $chirpBody === "") {
+        $logger->log("[ERROR] - Trying to post a chirp with no user or body");
+        return false;
+    }
 
-echo "success";
-return true;
+    // Post
+    $chirp = new Chirp();
+    $chirp->uploadChirp($user, $chirpBody);
+
+    $logger->log("[INFO] - Chirp from $user successfully uploaded to the database");
 
 ?>

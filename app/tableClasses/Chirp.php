@@ -2,13 +2,17 @@
 class Chirp{
     function __construct() {
         include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-        include_once ROOT_DIR . "/app/main/database.php";
+        include_once $_SERVER['DOCUMENT_ROOT']."/app/main/database.php";
+        include_once $_SERVER['DOCUMENT_ROOT']."/app/main/logger.php";
+        $this->logger = new Logger();
+
 
         $this->db = new Database();
     }
 
     // CRUD
     public function uploadChirp($chirpOwner, $body) {
+        $this->logger->log("[INFO] - Trying to post a chirp");
         $data[0] = $chirpOwner;
         $data[1] = $body;
 
