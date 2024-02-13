@@ -37,13 +37,24 @@
     display: none;
 }
 
+.header{
+    chirp-header{
+        header{
+            #desktopUser{
+                display: none;
+            }
+        }
+    }
+}
+
 main{
     margin: 0;
-    padding: 0;
+    padding-top: 50px;
     background-color: var(--chirpBg);
     display: flex;
     flex-direction: column;
     .outer-container{
+        padding-top: 50px;
         display: flex;
         flex-direction: column;
         width: 100%;
