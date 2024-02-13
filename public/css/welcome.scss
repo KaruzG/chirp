@@ -1,0 +1,180 @@
+@import 'vars.css';
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Syne:wght@400;600&display=swap");
+
+@mixin title($size: 3em) {
+    font-family: Syne;
+    font-size: $size;
+    color: aliceblue;
+}
+
+@mixin text {
+    font-family: 'Source Sans 3';
+    font-size: medium;
+    color: aliceblue;
+}
+
+@mixin textSpacing {
+    padding: 15px;
+    margin: 15px;
+}
+
+@mixin button($padding: 15px) {
+    min-width: 100px;
+    padding: $padding;
+    font-family: 'Source Sans 3';
+    font-size: medium;
+    background-color: var(--menuBg);
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: ease-in-out .3s;
+
+    &:hover {
+        border-radius: 20px;
+        background-color: var(--white);
+        cursor: pointer;
+
+    }
+
+}
+
+@mixin formField {
+    padding: 8px;
+    margin: 10px;
+    border-radius: 8px;
+    border: solid 0.5px black;
+    min-width: 300px;
+}
+
+#headerDropdownButton {
+    display: none;
+}
+
+.header {
+    chirp-header {
+        header {
+            #desktopUser {
+                display: none;
+            }
+        }
+    }
+}
+
+main {
+    margin: 0;
+    padding-top: 50px;
+    background-color: var(--pageBg);
+    display: flex;
+    flex-direction: column;
+
+    .outer-container {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin: 20px;
+        padding: 15px;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        h1 {
+            @include title;
+            @include textSpacing;
+        }
+
+        p {
+            max-width: 600px;
+            font-family: 'Source Sans 3';
+            font-size: larger;
+            color: var(--chirpBg);
+            @include textSpacing;
+        }
+
+        .buttons {
+            button {
+                @include button;
+            }
+        }
+
+        .sections {
+            margin-top: 25px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+            margin: 10px;
+
+            .features {
+                padding: 20px;
+                margin: 20px;
+                @include text;
+
+                h2 {
+                    @include title(1.5em);
+                }
+
+                ul {
+                    padding: 10px;
+                    margin: 10px;
+                }
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+
+            h2 {
+                @include title(1.5em);
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                margin: 10px;
+
+                input {
+                    @include formField;
+                }
+
+                textarea {
+                    @include formField;
+                }
+
+                #send {
+                    @include button(10px);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainGreen);
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center;
+    @include text;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        .outer-container {
+            .sections {
+                display: none;
+            }
+        }
+    }
+
+}

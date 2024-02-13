@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to chirp</title>
+
+    <!--Requirements-->
+    <link rel="stylesheet" href="../css/feed.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/welcome.css">
+
+    <script defer src="../../components/chirpHeader.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <chirp-header></chirp-header>
+    </header>
+    <!--Main column-->
+    <main>
+        <div class="outer-container">
+            <h1 class="subtitle">Welcome to Chirp!</h1>
+            <p>Welcome to Chirp – your social hub for sharing life's moments! Join now to connect with friends and family. Express yourself authentically, from everyday thoughts to major milestones. </p>
+            <p>Enjoy a user-friendly, private space that celebrates diversity and genuine connections. Create your account and let your voice be heard on Chirp!</p>
+            <div class="buttons">
+                <a href="./create.html"><button id="Register">Create an account</button></a>
+                <a href="./login.html"><button id="LogIn">Log in</button></a>
+            </div>
+            <div class="sections">
+                <section class="features">
+                    <h2>What for?</h2>
+                    <ul>
+                        <li>Post updates and share photos: Keep your friends and family updated on your life's moments.</li>
+                        <li>Connect with friends and family: Stay connected with the people who matter most to you.</li>
+                    </ul>
+                </section>
+                <section class="features">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Exclusive content sharing: Share your experiences and thoughts with a select audience.</li>
+                        <li>Customizable profile options: Tailor your profile to reflect your personality and interests.</li>
+                    </ul>
+                </section>
+                <section class="features">
+                    <h2>Visual Elements</h2>
+                    <ul>
+                        <li>Easy understanding and accessibility: Navigate our platform effortlessly, ensuring a seamless user experience.</li>
+                        <li>Friendly design: Enjoy a visually appealing interface designed to enhance your interaction.</li>
+                    </ul>
+                </section>
+                <section class="features">
+                    <h2>Community Guidelines</h2>
+                    <ul>
+                        <li>Respect the others: Treat fellow users with kindness and consideration, fostering a positive community spirit.</li>
+                        <li>Watch what you post: Don't post anything that could harm others</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <input type="text" id="name" name="name" required placeholder="Name">
+
+                    <input type="email" id="email" name="email" required placeholder="Email">
+
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <input type="submit" value="Send" id="send">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Chirp. Check it out on GitHub! </p><a href="https://github.com/KaruzG/chirp"><img src="../img/github.png" alt="GitHub" width="50px"></a>
+    </footer>
+    
+</body>
+
+</html>
