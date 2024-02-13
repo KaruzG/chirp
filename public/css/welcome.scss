@@ -59,7 +59,7 @@ main{
             @include textSpacing;
         }
         p{
-            max-width: 70%;
+            max-width: 600px;
             font-family: 'Source Sans 3';
             font-size: larger;
             @include textSpacing;
@@ -74,12 +74,65 @@ main{
             display: grid;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
+            padding: 20px;
+            margin: 10px;
             .features{
+                padding: 20px;
+                margin: 20px;
                 @include text;
                 h2{
                     @include title(1.5em);
                 }
+                ul{
+                    padding: 10px;
+                    margin: 10px;
+                }
+            }
+        }
+
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            h2{
+                @include title(1.5em);
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                margin: 10px;
+                input{
+                    padding: 8px;
+                    margin: 10px;
+                    border-radius: 8px;
+                    border: solid 0.5px black;
+                }
+                textarea{
+                    padding: 8px;
+                    margin: 10px;
+                    border-radius: 8px;
+                    border: solid 0.5px black;
+                }
+                #send{
+                    cursor: pointer;
+                }
             }
         }
     }
+
+}
+.footer{
+    background-color: var(--mainGreen);
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        .outer-container{
+            .sections{
+                display: none;
+            }
+        }
+    }
+
 }

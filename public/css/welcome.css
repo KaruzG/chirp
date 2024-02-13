@@ -30,7 +30,7 @@ main .outer-container h1 {
   margin: 15px;
 }
 main .outer-container p {
-  max-width: 70%;
+  max-width: 600px;
   font-family: "Source Sans 3";
   font-size: larger;
   padding: 15px;
@@ -56,12 +56,60 @@ main .outer-container .sections {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  margin: 10px;
 }
 main .outer-container .sections .features {
+  padding: 20px;
+  margin: 20px;
   font-family: "Source Sans 3";
   font-size: medium;
 }
 main .outer-container .sections .features h2 {
   font-family: Syne;
   font-size: 1.5em;
+}
+main .outer-container .sections .features ul {
+  padding: 10px;
+  margin: 10px;
+}
+main .outer-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+main .outer-container .contact-form h2 {
+  font-family: Syne;
+  font-size: 1.5em;
+}
+main .outer-container .contact-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+}
+main .outer-container .contact-form form input {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 8px;
+  border: solid 0.5px black;
+}
+main .outer-container .contact-form form textarea {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 8px;
+  border: solid 0.5px black;
+}
+main .outer-container .contact-form form #send {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: var(--mainGreen);
+}
+
+@media screen and (max-width: 600px) {
+  main .outer-container .sections {
+    display: none;
+  }
 }/*# sourceMappingURL=welcome.css.map */
