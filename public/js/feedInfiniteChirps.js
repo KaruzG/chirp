@@ -32,14 +32,17 @@ async function infiniteScroll() {
     document.addEventListener('scroll', function infinite(e) {
         let documentHeight = document.body.scrollHeight;
         let currentScroll = window.scrollY + window.innerHeight;
+        let postToShow = 3;
         if(currentScroll == documentHeight) {
-            showPost(postToStart);
-            postToStart--
-        }
+            for(let i = 0; i <= postToShow; i++) {
+                if (postToStart === 0) {
+                    console.log("No more posts!");
+                    document.removeEventListener('scroll', infinite);
+                }
 
-        if (postToStart === 0) {
-            console.log("No more posts!");
-            document.removeEventListener('scroll', infinite);
+                showPost(postToStart);
+                postToStart--
+            }
         }
     })
 

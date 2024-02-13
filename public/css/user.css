@@ -63,7 +63,8 @@ section#userInfo div div#userInfo div:nth-child(1) button {
   border: 2px solid var(--chirpLightGreen2);
 }
 section#userInfo div div#userInfo div:nth-child(1) button:hover {
-  background-color: 2px solid var(--mainGreen);
+  background-color: var(--darkGreen);
+  cursor: pointer;
 }
 section#userInfo div div#userInfo div:nth-child(1) img {
   max-width: 20px;
