@@ -10,6 +10,7 @@ nav {
   top: 20vh;
   left: 10vw;
   height: 50vh;
+  width: -moz-max-content;
   width: max-content;
   padding: 3em;
   border-radius: 25px;
@@ -60,6 +61,7 @@ main {
   z-index: 1;
   display: flex;
   top: 56px;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 100vh;
   padding: 1em;
