@@ -1,0 +1,4 @@
+Options -Indexes
+DirectoryIndex index.php
+
+ErrorDocument 404 /public/pages/404.html
