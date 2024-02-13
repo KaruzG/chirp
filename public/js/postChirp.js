@@ -31,8 +31,9 @@ function postChirp() {
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
         body: 'postText=' + $chirpBody.value,
     }).then((response) => {
-        // then
+        location.reload();
     })
+
 }
 
 getUsername();

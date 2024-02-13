@@ -1,3 +1,4 @@
+
 @mixin chirpLogo() {
     font-size: x-large;
     text-shadow: var(--textShadow);
@@ -50,7 +51,8 @@
     border: 2px solid var(--chirpLightGreen2);
 
     &:hover {
-        background-color: 2px solid var(--mainGreen);
+        background-color: var(--darkGreen);
+        cursor: pointer;
     }
 }
 

@@ -62,7 +62,7 @@ chirp-header div#headerDropdownOuter ul {
   gap: 0.5em;
   font-weight: bold;
 }
-chirp-header div#headerDropdownOuter ul li {
+chirp-header div#headerDropdownOuter ul li, chirp-header div#headerDropdownOuter ul li a {
   color: white;
   text-shadow: 1px 1px 2px black;
 }

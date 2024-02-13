@@ -23,6 +23,7 @@ class ChirpHeader extends HTMLElement {
         let logo = document.createElement("a")
         logo.id = "logoHeader"
         logo.innerText = "CHIRP"
+        logo.href = "/public/pages/feed.html";
         outerContainer.appendChild(logo)
 
         let button = document.createElement("button")
@@ -79,7 +80,12 @@ class ChirpHeader extends HTMLElement {
 
 
         // Lista del dropdown -----------------
-        const dropdownList = ["Home", "Saved", "Profile", "Settings"]
+        const dropdownList = [
+            ["Home", "/public/pages/feed.html"],
+            ["Saved", "/public/pages/user.html"],
+            ["Profile", "/public/pages/user.html"],
+            ["Settings", "/public/pages/options.html"],
+        ]
 
         let ul = document.createElement("ul")
         ul.id = "ulDropdown"
@@ -89,7 +95,10 @@ class ChirpHeader extends HTMLElement {
         for (const i of dropdownList) {
             ul.appendChild(document.createElement("hr"))
             let li = document.createElement("li")
-            li.innerText = i
+            let a = document.createElement("a")
+            a.innerText = i[0]
+            a.href = i[1]
+            li.appendChild(a)
             ul.appendChild(li)
         }
         dropdown.append(ul)
