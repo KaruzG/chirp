@@ -51,5 +51,18 @@
   cursor: pointer;
 }
 #postChirp div:nth-child(2) div button {
-  @inc;
+  padding: 0.5em 1em;
+  color: var(--white);
+  font-weight: bold;
+  font-size: x-large;
+  letter-spacing: 1px;
+  background-color: rgba(28, 88, 84, 0.5019607843);
+  border: none;
+  border-radius: 25px;
+  transition: 0.2s;
+}
+#postChirp div:nth-child(2) div button:hover {
+  transition: 0.2s;
+  background-color: rgba(11, 34, 32, 0.5019607843);
+  cursor: pointer;
 }/*# sourceMappingURL=postChirp.css.map */
