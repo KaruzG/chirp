@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include_once "config.php";
+include_once ['DOCUMENT_ROOT']."config.php";
 
 
 if ($_SESSION['logged_user'] != null) {

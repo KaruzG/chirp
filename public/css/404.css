@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
+body {
+  background-color: var(--pageBg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+body main {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main h1 {
+  font-size: 130px;
+  font-family: "Sonsie One";
+  color: var(--white);
+  text-shadow: 10px 4px 0px var(--mainGreen);
+}
+body main h2 {
+  color: var(--white);
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 5px 5px 0px var(--mainGreen);
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+body main hr {
+  width: 50%;
+  margin-bottom: 2em;
+}
+body main a {
+  padding: 0.5em 1em;
+  color: var(--white);
+  font-weight: bold;
+  font-size: x-large;
+  letter-spacing: 1px;
+  background-color: rgba(28, 88, 84, 0.5019607843);
+  border: none;
+  border-radius: 25px;
+  transition: 0.2s;
+  background-color: var(--mainGreen);
+  padding: 10px 23%;
+  border-radius: 8px;
+}
+body main a:hover {
+  transition: 0.2s;
+  background-color: rgba(11, 34, 32, 0.5019607843);
+  cursor: pointer;
+}
+body aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+body aside img {
+  width: 80%;
+}
+@media screen and (max-width: 1080px) {
+  body aside {
+    display: none;
+  }
+}/*# sourceMappingURL=404.css.map */
