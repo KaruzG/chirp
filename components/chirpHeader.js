@@ -14,7 +14,6 @@ class ChirpHeader extends HTMLElement {
         super()
         this.render()
         this.dropdownButton()
-        console.log("✅ · Component Header Loaded")
     }
 
     render() {
@@ -53,6 +52,7 @@ class ChirpHeader extends HTMLElement {
 
         let userText = document.createElement("h3")
         userText.innerText = "Username";
+        userText.classList.add("usernamePlaceholder")
         desktopDiv.appendChild(userText)
 
         outerContainer.appendChild(desktopDiv)
