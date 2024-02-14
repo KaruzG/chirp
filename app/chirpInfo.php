@@ -1,6 +1,6 @@
 <?php 
 include_once $_SERVER['DOCUMENT_ROOT']."/config.php";
-include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/chirp.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/Chirp.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/app/tableClasses/user.php";
 
 
