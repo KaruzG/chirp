@@ -44,11 +44,10 @@ section#userInfo div div#userInfo div:nth-child(1) {
   align-items: center;
 }
 section#userInfo div div#userInfo div:nth-child(1) span {
-  font-size: larger;
-  color: var(--white);
-  text-shadow: 1px 1px 2px black;
-  font-style: italic;
-  font-weight: bold;
+  color: var(--pageBg);
+  font-size: x-large;
+  text-shadow: none;
+  font-weight: bolder;
   max-width: 320px;
   margin-right: auto;
   margin-left: 20px;

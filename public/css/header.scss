@@ -15,6 +15,9 @@ chirp-header {
 
     header {
         overflow: visible;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     button#headerDropdownButton {

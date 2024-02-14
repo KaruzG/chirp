@@ -48,7 +48,6 @@ section#userInfo {
                 gap: 1.5em;
                 align-items: center;
                 span {
-                    @include mixins.userName;
                     color: var(--pageBg);
                     font-size: x-large;
                     text-shadow: none;
